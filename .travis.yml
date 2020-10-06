@@ -3,7 +3,7 @@ node_js:
 - stable
 branches:
   only:
-  - main
+  - master
 install: cd ./app/web npm install
 cache:
   directories:
