@@ -5,21 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="login.css">
-  <title>DriveAndPay - Cadastro</title>
+  <title>DriveAndPay - Login</title>
 </head>
 <body>
   <header class="header">
     <span>DriveAndPay</span>
-    <img id="logo"src="../assets/images/logo.svg" alt="DriveAndPay"/>
+    <img id="logo"src="../../assets/images/logo.svg" alt="DriveAndPay"/>
   </header>
   <section id="container">
     <nav>
       <ul>
-        <li><a href="#">Entrar</a></li>
-        <li><a href="#">Cadastrar</a></li>
+        <li id="entrar" class="selected">Entrar</li>
+        <li id="cadastrar">Cadastrar</li>
       </ul>
     </nav>
     <form id="login">
+      <label for="cpf">CPF</label>
+      <input type="text" name="cpf">
+      <label for="senha">Senha</label>
+      <input type="password" name="senha">
+      <button class="btn btn-blue" type="submit">Login</button>
+    </form>
+    <form id="cadastro">
       <label for="name">Nome Completo</label>
       <input type="text" name="name">
       <label for="email">Email</label>
@@ -43,6 +50,7 @@
       <label for="state">Estado</label>
       <input type="text" name="estate">
       <button class="btn btn-blue" type="submit">Continuar Cadastro</button>
+      <script src="login.js"></script>
     </form>
   </section>
 </body>
