@@ -85,6 +85,7 @@ button.btn {
   font-size: 20px;
   font-weight: 700;
   color: #F0F0F5;
+  filter: drop-shadow(0px 4px 10px #00000040)
 }
 
 button.btn-blue { background-color: #384887; }
