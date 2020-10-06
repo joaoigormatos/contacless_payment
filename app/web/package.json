@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --no-cache"
+    "test": "jest --no-cache",
+    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "jest": {
+    "collectCoverage": true
+  },
   "devDependencies": {
+    "coveralls": "^3.1.0",
     "jest": "^26.4.2"
   }
 }

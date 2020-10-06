@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- stable
+branches:
+  only:
+  - main
+install: cd ./app/web npm install
+cache:
+  directories:
+    - ./app/web/node_modules
+script: cd ./app/web && npm test
+after_success:
+  - cd ./app/web
+  - npm run coverage
+  - bash <(curl -s https://codecov.io/bash)
