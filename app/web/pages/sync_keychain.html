@@ -13,7 +13,8 @@
   <body>
     <main>
       <div class="wrapper">
-        <h2>Sincronize seu chaveiro</h2>
+        <h2>Bem vindo, Fabiano!</h2>
+        <p>Estamos quase lá!</p>
         <svg
           class="keychain"
           width="227"
@@ -50,13 +51,18 @@
           <button
             class="btn btn-blue"
             type="submit"
-            onclick="location.href='payment_methods.html'"
+            onclick="window.location.assign('payment_methods.html')"
           >
             SEM CONTATO
           </button>
-          <button class="btn btn-blue" type="submit">USAR CÓDIGO</button>
+          <!-- <button class="btn btn-blue" type="submit">USAR CÓDIGO</button> -->
+          <div class="question">
+            <input type="text" required />
+            <label>USAR CÓDIGO</label>
+          </div>
         </div>
       </div>
+      <div class="side-image"></div>
     </main>
     <script src="../assets/js/sync-keychain.js" defer></script>
   </body>

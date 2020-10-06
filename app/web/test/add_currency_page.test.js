@@ -46,18 +46,11 @@ describe('the add_currency.html', () => {
     const SUT = document.querySelector('body main .wrapper input');
     expect(SUT).toBeTruthy();
   });
-  it('must render two buttons with class "secondary-button" inside the main wrapper', () => {
-    const SUT = document.querySelectorAll('body main .wrapper .secondary-button');
+  it('must render two buttons with class "btn-yellow" inside the main wrapper', () => {
+    const SUT = document.querySelectorAll('body main .wrapper .btn-yellow');
     expect(SUT.length).toBe(2);
-  });
-  it('must render a button with class "credit-card-button" inside the main wrapper', () => {
-    const SUT = document.querySelector('body main .wrapper .credit-card-button');
-    expect(SUT).toBeTruthy();
-    expect(SUT.innerHTML).toBe('Cartão de crédito');
-  });
-  it('must render a button with class "boleto-button" inside the main wrapper', () => {
-    const SUT = document.querySelector('body main .wrapper .boleto-button');
-    expect(SUT).toBeTruthy();
-    expect(SUT.innerHTML).toBe('Boleto');
+    expect(SUT[0].innerHTML).toBe('Cartão de crédito');
+    expect(SUT[1].innerHTML).toBe('Boleto');
+
   });
 });
