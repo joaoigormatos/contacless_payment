@@ -8,7 +8,7 @@ const html = fs.readFileSync(
 
 jest.dontMock('fs');
 
-describe('the index.html', () => {
+describe('the sync_keychain.html', () => {
   beforeEach(() => {
     document.documentElement.innerHTML = html.toString();
   });
