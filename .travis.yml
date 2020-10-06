@@ -4,11 +4,12 @@ node_js:
 branches:
   only:
   - master
-install: cd ./app/web && npm install
+before_install: cd ./app/web
+install: npm install
 cache:
   directories:
     - ./app/web/node_modules
-script: cd ./app/web && npm test
+script: npm test
 after_success:
   - cd ./app/web
   - npm run coverage
