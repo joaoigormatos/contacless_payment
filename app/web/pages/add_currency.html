@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DriveAndPay</title>
-</head>
-<body>
-  <main>
-    <div class="wrapper">
-      <h2>Adicionar saldo</h2>
-      <h3>Informe o valor</h3>
-      <p>R$ <span class="add-currency-value"></span></p>
-      <button class="secondary-button credit-card-button">Cartão de crédito</button>
-      <button class="secondary-button boleto-button">Boleto</button>
-    </div>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DriveAndPay</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/add_currency.css" />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <h2>Adicionar saldo</h2>
+        <h3>Informe o valor</h3>
+        <input dir="rtl" type="currency" value="" placeholder="R$ 0,00" />
+        <div class="btn-container">
+          <button class="btn btn-yellow">Cartão de crédito</button>
+          <button class="btn btn-yellow">Boleto</button>
+        </div>
+      </div>
+    </main>
+    <script
+      src="../assets/js/AddCurrencyPage/currency-text-field.js"
+      defer
+    ></script>
+  </body>
 </html>

@@ -1,24 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DriveAndPay</title>
-  <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
-</head>
-<body>
-  <main>
-    <div class="wrapper">
-      <div class="plastic-card credit">
-        <i class="fas fa-plus"></i>
-        <p>Adicionar cartao</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DriveAndPay</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/payment-methods.css" />
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="card card-blue">
+          <svg
+            width="80"
+            height="81"
+            viewBox="0 0 80 81"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M40 18.16C40.663 18.16 41.2989 18.4234 41.7678 18.8922C42.2366 19.3611 42.5 19.997 42.5 20.66V40.66C42.5 41.323 42.2366 41.9589 41.7678 42.4278C41.2989 42.8966 40.663 43.16 40 43.16H20C19.337 43.16 18.7011 42.8966 18.2322 42.4278C17.7634 41.9589 17.5 41.323 17.5 40.66C17.5 39.997 17.7634 39.3611 18.2322 38.8922C18.7011 38.4234 19.337 38.16 20 38.16H37.5V20.66C37.5 19.997 37.7634 19.3611 38.2322 18.8922C38.7011 18.4234 39.337 18.16 40 18.16Z"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M37.5 40.66C37.5 39.997 37.7634 39.3611 38.2322 38.8922C38.7011 38.4234 39.337 38.16 40 38.16H60C60.663 38.16 61.2989 38.4234 61.7678 38.8922C62.2366 39.3611 62.5 39.997 62.5 40.66C62.5 41.323 62.2366 41.9589 61.7678 42.4278C61.2989 42.8966 60.663 43.16 60 43.16H42.5V60.66C42.5 61.323 42.2366 61.9589 41.7678 62.4278C41.2989 62.8966 40.663 63.16 40 63.16C39.337 63.16 38.7011 62.8966 38.2322 62.4278C37.7634 61.9589 37.5 61.323 37.5 60.66V40.66Z"
+            />
+          </svg>
+
+          <p>Adicionar<br> cartão</p>
+        </div>
+        <div class="card card-yellow">
+          <svg
+            width="80"
+            height="81"
+            viewBox="0 0 80 81"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M40 17.82C40.663 17.82 41.2989 18.0834 41.7678 18.5522C42.2366 19.0211 42.5 19.657 42.5 20.32V40.32C42.5 40.983 42.2366 41.6189 41.7678 42.0878C41.2989 42.5566 40.663 42.82 40 42.82H20C19.337 42.82 18.7011 42.5566 18.2322 42.0878C17.7634 41.6189 17.5 40.983 17.5 40.32C17.5 39.657 17.7634 39.0211 18.2322 38.5522C18.7011 38.0834 19.337 37.82 20 37.82H37.5V20.32C37.5 19.657 37.7634 19.0211 38.2322 18.5522C38.7011 18.0834 39.337 17.82 40 17.82Z"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M37.5 40.32C37.5 39.657 37.7634 39.0211 38.2322 38.5522C38.7011 38.0834 39.337 37.82 40 37.82H60C60.663 37.82 61.2989 38.0834 61.7678 38.5522C62.2366 39.0211 62.5 39.657 62.5 40.32C62.5 40.983 62.2366 41.6189 61.7678 42.0878C61.2989 42.5566 60.663 42.82 60 42.82H42.5V60.32C42.5 60.983 42.2366 61.6189 41.7678 62.0878C41.2989 62.5566 40.663 62.82 40 62.82C39.337 62.82 38.7011 62.5566 38.2322 62.0878C37.7634 61.6189 37.5 60.983 37.5 60.32V40.32Z"
+            />
+          </svg>
+          <p>Pré-pago</p>
+        </div>
       </div>
-      <div class="plastic-card prepaid">
-        <i class="fas fa-plus"></i>
-        <p>Pré-pago</p>
-      </div>
-    </div>
-  </main>
-  <script src="../assets/js/payment_methods.js" defer></script>
-</body>
+    </main>
+    <script src="../assets/js/payment_methods.js" defer></script>
+  </body>
 </html>

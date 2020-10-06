@@ -32,33 +32,33 @@ describe('the payment_methods.html', () => {
     const SUT = document.querySelector('body main .wrapper');
     expect(SUT).toBeTruthy();
   });
-  it('must render two divs with class "plastic-card" inside the main wrapper', () => {
-    const SUT = document.querySelectorAll('body main .wrapper .plastic-card');
+  it('must render two divs with class "card" inside the main wrapper', () => {
+    const SUT = document.querySelectorAll('body main .wrapper .card');
     expect(SUT.length).toBe(2);
   });
-  it('must render a div with class "credit"', () => {
-    const SUT = document.querySelector('body main .wrapper .credit');
+  it('must render a div with class "card-blue"', () => {
+    const SUT = document.querySelector('body main .wrapper .card-blue');
     expect(SUT).toBeTruthy();
   });
-  it('must render a icon inside the "credit" card', () => {
-    const SUT = document.querySelector('body main .wrapper .credit i');
+  it('must render a svg inside the "card-blue" card', () => {
+    const SUT = document.querySelector('body main .wrapper .card-blue svg');
+    expect(SUT).toBeTruthy();
+  });
+  it('must render a p with text inside the "card-blue" card', () => {
+    const SUT = document.querySelector('body main .wrapper .card-blue p');
+    expect(SUT).toBeTruthy();
+    expect(SUT.innerHTML).toBe('Adicionar<br> cartão');
+  });
+  it('must render a div with class "card-yellow"', () => {
+    const SUT = document.querySelector('body main .wrapper .card-yellow');
+    expect(SUT).toBeTruthy();
+  });
+  it('must render a svg inside the "card-yellow" card', () => {
+    const SUT = document.querySelector('body main .wrapper .card-yellow svg');
     expect(SUT).toBeTruthy();
   });
   it('must render a p with text inside the "credit" card', () => {
-    const SUT = document.querySelector('body main .wrapper .credit p');
-    expect(SUT).toBeTruthy();
-    expect(SUT.innerHTML).toBe('Adicionar cartao');
-  });
-  it('must render a div with class "prepaid"', () => {
-    const SUT = document.querySelector('body main .wrapper .prepaid');
-    expect(SUT).toBeTruthy();
-  });
-  it('must render a icon inside the "prepaid" card', () => {
-    const SUT = document.querySelector('body main .wrapper .prepaid i');
-    expect(SUT).toBeTruthy();
-  });
-  it('must render a p with text inside the "credit" card', () => {
-    const SUT = document.querySelector('body main .wrapper .prepaid p');
+    const SUT = document.querySelector('body main .wrapper .card-yellow p');
     expect(SUT).toBeTruthy();
     expect(SUT.innerHTML).toBe('Pré-pago');
   });

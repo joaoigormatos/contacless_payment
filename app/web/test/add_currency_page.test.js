@@ -42,10 +42,9 @@ describe('the add_currency.html', () => {
     expect(SUT).toBeTruthy();
     expect(SUT.innerHTML).toBe('Informe o valor');
   });
-  it('must render a p inside the wrapper', () => {
-    const SUT = document.querySelector('body main .wrapper p');
+  it('must render a text input inside the wrapper', () => {
+    const SUT = document.querySelector('body main .wrapper input');
     expect(SUT).toBeTruthy();
-    expect(SUT.innerHTML).toBe('R$ <span class="add-currency-value"></span>');
   });
   it('must render two buttons with class "secondary-button" inside the main wrapper', () => {
     const SUT = document.querySelectorAll('body main .wrapper .secondary-button');

@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
+.wrapper {
+  margin: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: grid;
+  justify-items: center;
+}
+
+.card {
+  --height: 222px;
+  --width: 350px;
+  height: var(--height);
+  width: var(--width);
+  min-width: var(--width);
+  background: linear-gradient(90deg, var(--purple), var(--purple2));
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.6));
+  transform: translateY(calc(50% - 10px));
+  margin: 10px;
+  position:relative;
+}
+
+.card-blue {
+  background-color: #384887;
+  color: #f0f0f5;
+}
+
+.card-yellow {
+  background-color: #ffd15e;
+  color: #4f4f4f;
+}
+
+
+.card svg {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+}
+
+.card-blue svg path{
+  fill: #f0f0f5;
+}
+
+.card-yellow svg path{
+  fill: #4f4f4f;
+}
+
+p {
+  text-align: center;
+  font-size: 2.25rem;
+  position: absolute;
+  top: 46%; 
+  right: 10%;
+}
+
+
+
+
+
+
+
+

@@ -45,18 +45,15 @@ describe('the sync_keychain.html', () => {
     const SUT = document.querySelector('body main .wrapper .keychain');
     expect(SUT).toBeTruthy();
   });
-  it('must render two buttons with class "primary-button" inside the main wrapper', () => {
-    const SUT = document.querySelectorAll('body main .wrapper .primary-button');
+  it('must render two buttons with class "btn" inside the main wrapper', () => {
+    const SUT = document.querySelectorAll('body main .wrapper .btn-container .btn');
     expect(SUT.length).toBe(2);
   });
-  it('must render a button with class "no-contact-button" inside the main wrapper', () => {
-    const SUT = document.querySelector('body main .wrapper .no-contact-button');
+  it('must render a button with class "btn-blue" inside the main wrapper', () => {
+    const SUT = document.querySelectorAll('body main .wrapper .btn-container .btn-blue');
     expect(SUT).toBeTruthy();
-    expect(SUT.innerHTML).toBe('SEM CONTATO');
-  });
-  it('must render a button with class "use-code-button" inside the main wrapper', () => {
-    const SUT = document.querySelector('body main .wrapper .use-code-button');
-    expect(SUT).toBeTruthy();
-    expect(SUT.innerHTML).toBe('USAR CÓDIGO');
+    expect(SUT[0].innerHTML).toMatch(/(SEM CONTATO)/i)
+    expect(SUT[1].innerHTML).toMatch(/(USAR CÓDIGO)/i)
+
   });
 });
