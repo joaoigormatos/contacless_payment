@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const html = fs.readFileSync(
-  path.resolve(__dirname, '../pages/sync-keychain.html'),
+  path.resolve(__dirname, '../pages/sync_keychain.html'),
   'utf8'
 );
 
