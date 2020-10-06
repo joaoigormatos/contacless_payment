@@ -35,15 +35,16 @@ nav ul {
   list-style: none;
 }
 
-nav ul li a{
+nav ul li{
   font-weight: 500;
   font-size: 16px;
   color: #4F4F4F;
   transition: 0.2s;
   text-decoration: none;
+  cursor: pointer;
 }
 
-nav ul li a:hover {
+nav ul li:hover, nav ul li.selected {
   border-bottom: 6px solid #384887;
   font-weight: 700;
   color: #384887;
@@ -54,6 +55,8 @@ form {
   display: flex;
   flex-direction: column;
 }
+
+form#cadastro { display: none; }
 
 form label {
   margin-bottom: 10px;
@@ -88,6 +91,6 @@ button.btn {
   filter: drop-shadow(0px 4px 10px #00000040)
 }
 
-button.btn-blue { background-color: #384887; }
+button.btn-blue { background: linear-gradient(227.39deg, rgba(81, 102, 185, 0.901042) -0.56%, #1C2755 67.51%); }
 
 button.btn-yellow { background-color: #FFD15E; }
