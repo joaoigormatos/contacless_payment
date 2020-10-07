@@ -1,8 +1,11 @@
-// Remove o loader
-setTimeout(() => {
-  document.querySelector('.loader').remove();
-  renderHistoryCards('history-card-container');
-}, 1500);
+// Remove o loader e renderiza os cards
+if(window.location.pathname === "/app/web/pages/history.html" ) {
+  setTimeout(() => {
+    document.querySelector('.loader').remove();
+    renderHistoryCards('history-card-container');
+  }, 1500);
+
+}
 
 // Dados dos cards
 const cards = [
