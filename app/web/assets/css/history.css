@@ -17,7 +17,9 @@ h1 {
   display: flex;
   flex-direction: column;
 
+  padding: 0 12px;
   padding-top: 24px;
+
 }
 
 .loader {
@@ -25,6 +27,50 @@ h1 {
 
 }
 
+div.gas-card {
+  background-color: var(--white);
+
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+
+  margin-bottom: 18px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header.card-header {
+  padding: 0%;
+  width: 100%;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+span.gas-value {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--main);
+}
+
+span.gas-date {
+  font-size: 12px;
+  font-weight: 500;
+  color: #4f4f4f;
+}
+
+h2.gas-station-name {
+  font-size: 18px;
+  font-weight: 600;
+  
+  text-align: center;
+  color: #4f4f4f;
+
+  margin-top: 8px;
+}
 
 @keyframes rotating {
   from {
@@ -46,5 +92,39 @@ h1 {
 @media (max-width: 400px) {
   h1 {
     width: 160px;
+  }
+}
+
+@media (min-width: 750px) {
+  h1 {
+    font-size: 48px;
+    margin-bottom: 32px;
+  }
+
+  div.gas-card {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 24px;
+  }
+
+  h2.gas-station-name {
+    font-size: 36px;
+    margin-top: 0;
+
+  }
+
+  span.gas-value {
+    font-size: 24px;
+
+  }
+  
+  span.gas-date {
+    font-size: 18px;
+
+  }
+
+  header.card-header {
+    flex-direction: column;
+    width: max-content;
   }
 }
