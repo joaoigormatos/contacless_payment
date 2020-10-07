@@ -1,0 +1,18 @@
+header {
+  padding-top: 48px;
+
+}
+
+h1 {
+  color: var(--main);
+  text-align: center;
+  font-size: 24px;
+
+  margin: 0 auto;
+}
+
+@media (max-width: 400px) {
+  h1 {
+    width: 160px;
+  }
+}
