@@ -27,6 +27,7 @@ header #logo {
 
 section#container {
   padding: 30px;
+  max-width: 450px;
 }
 
 form {
@@ -67,3 +68,22 @@ button.btn {
 button.btn-blue { background: linear-gradient(227.39deg, rgba(81, 102, 185, 0.901042) -0.56%, #1C2755 67.51%); }
 
 button.btn-yellow { background-color: #FFD15E; }
+
+#content { 
+  width: 450px;
+  min-height: 100vh;
+}
+
+.desktopBackground {
+  position: fixed;
+  top: 0;
+  left: 450px;
+  width: calc(100vw - 450px);
+  height: 100vh;
+  background-image: url('../../assets/images/backgroundPreview.png');
+  flex: 1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
