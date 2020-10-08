@@ -1,0 +1,23 @@
+form#continuarcadastro { align-items: center; }
+
+form h2 { 
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #111111;
+}
+
+form h3 {
+  color: #384887;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: right;
+  margin-top: 5px;
+}
+
+input[type=file] { display: none; }
+
+label.file { 
+  margin-top: 20px;
+  cursor: pointer;
+}
