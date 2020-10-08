@@ -39,5 +39,5 @@ const cardData = {
 
 createCard(card);
 
-loadCSS("../Login/login.css");
+loadCSS("../../assets/css/style.css");
 loadCSS("creditcard.css");
