@@ -1,64 +1,43 @@
-const container = document.querySelector('#container');
-container.innerHTML = "";
+const modal = document.querySelector('#modal');
+modal.innerHTML = "";
+const card = document.createElement('div');
+card.id = "card";
+modal.appendChild(card);
 const formCreditCard = document.createElement('form');
 formCreditCard.id = "creditcard";
-container.appendChild(formCreditCard);
+modal.appendChild(formCreditCard);
 
-function criaInput(name, type, father, div, length) {
-  function formatName(name) {
-    const formatedName = name
-      .normalize("NFD")
-      .replace(/[^()a-zA-Zs]/g, "")
-      .toLowerCase();
-    return formatedName;
-  }
-
-  function createDiv() {
-    const div = document.createElement('div');
-    div.id = `div${name}`;
-    div.className = "small";
-    father.appendChild(div);
-    return div;
-  }
-
-  const label = document.createElement('label');
-  label.innerText = name;
-
-  const formatedName = formatName(name);
-
-  label.htmlFor = formatedName;
-  const input = document.createElement('input');
-  input.type = type;
-  input.name = formatedName;
-
-  if (div) {
-    const div = createDiv();
-    input.maxLength = length;
-    div.appendChild(label);
-    div.appendChild(input);
-  } else {
-    father.appendChild(label);
-    father.appendChild(input);
-  }
-}
-
-function loadCSS(url) {
-  var lnk = document.createElement('link');
-  lnk.setAttribute('type', "text/css" );
-  lnk.setAttribute('rel', "stylesheet" );
-  lnk.setAttribute('href', url );
-  document.getElementsByTagName("head").item(0).appendChild(lnk);
-}
-
-criaInput("Numero do Cartão", "text", formCreditCard, false);
-criaInput("Nome do titular", "text", formCreditCard, false);
+createInput("Numero do Cartão", "text", formCreditCard, false);
+createInput("Nome do titular", "text", formCreditCard, false);
 
 const divCvcValidade = document.createElement('div');
 divCvcValidade.id = "divCvcValidade";
 formCreditCard.appendChild(divCvcValidade);
 
-criaInput("CVC", "text", divCvcValidade, true, 3);
-criaInput("Validade", "text", divCvcValidade, true, 5);
+createInput("CVC", "text", divCvcValidade, true, 3);
+createInput("Validade", "text", divCvcValidade, true, 5);
+
+createButton("Cadastrar Cartão", "blue", formCreditCard);
+
+const cardInputs = document.querySelectorAll('#creditcard input');
+const cardSpans = document.querySelectorAll('#card span');
+
+const cardData = {
+  input: {
+    number: cardInputs[0],
+    name: cardInputs[1],
+    cvc: cardInputs[2],
+    validade: cardInputs[3]
+  },
+  show: {
+    number: cardSpans[0],
+    name: cardSpans[1],
+    cvc: cardSpans[2],
+    validade: cardSpans[3]
+  }
+}
+
+createCard(card);
 
 loadCSS("../Login/login.css");
 loadCSS("creditcard.css");
