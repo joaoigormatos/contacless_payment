@@ -46,7 +46,7 @@ const sendBoletoValue = () => {
 };
 
 creditButton.onclick = sendCreditValue;
-creditButton.onclick = sendBoletoValue;
+boletoButton.onclick = sendBoletoValue;
 
 currencyInput.addEventListener('focus', onFocus);
 currencyInput.addEventListener('blur', onBlur);

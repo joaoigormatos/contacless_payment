@@ -8,9 +8,35 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="../assets/components/SyncKeychain/desktop.css"
+    />
   </head>
-  <body>
-    <sync-keychain></sync-keychain>
+  <body style="margin: 0">
+    <main>
+      <div class="wrapper">
+        <div class="content">
+          <h2>Bem vindo, <br />Fabiano!</h2>
+          <p>Estamos quase lá!</p>
+          <div class="btn-container">
+            <button
+              class="btn btn-blue"
+              type="submit"
+              onclick="window.location.assign('payment_methods.html')"
+            >
+              SEM CONTATO
+            </button>
+            <div class="question">
+              <!-- onchange 8 digitos -->
+              <input type="text" required pattern="\S+.*" />
+              <label>USAR CÓDIGO</label>
+            </div>
+          </div>
+        </div>
+        <div class="side-image"></div>
+      </div>
+    </main>
     <script src="../assets/components/SyncKeychain/SyncKeychainComponent.js"></script>
   </body>
 </html>
