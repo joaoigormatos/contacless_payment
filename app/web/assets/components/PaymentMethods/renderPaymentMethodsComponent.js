@@ -18,13 +18,13 @@ href="../assets/components/PaymentMethods/desktop.css"
               width="80"
               src="../assets/images/plus-icon.svg"
             />
-            <h3>Cartão de <br />crédito</h3>
+            <h3>Cartão de crédito</h3>
           </div>
         </div>
         <div class="face face2">
           <div class="content">
             <p>
-              Tokenize seu cartão de crédito, deixando-o registrado.<br />
+              Tokenize seu cartão de crédito, deixando-o registrado.
               Segurança e praticidade na hora do pagamento.
             </p>
           </div>
@@ -45,7 +45,7 @@ href="../assets/components/PaymentMethods/desktop.css"
           <div class="content">
             <p>
               Se não quiser registrar um cartão de crédito, vá de
-              pré-pago!<br />
+              pré-pago!
               Adicione a quantia que desejar na carteira virtual, tanto
               por cartão ou boleto.
             </p>
@@ -56,7 +56,7 @@ href="../assets/components/PaymentMethods/desktop.css"
   </main>
 </div>
 </div>
-<script src="../assets/components/utils/modalHandler.js"></script>`
+<script src="../assets/components/utils/modalHandler.js"></script>`;
 
 const mobileHTML = `
 <link
