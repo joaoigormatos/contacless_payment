@@ -100,46 +100,46 @@ href="../assets/components/PaymentMethods/mobile.css"
 </div>
 `;
 
-function setHTML(o, html, clear) {
-  // o: container to set the innerHTML
+function setHTML(body, html, clear) {
+  // body: container to set the innerHTML
   // html: html text to set.
   // clear: if true, the container is cleared first (children removed)
-  if (clear) o.innerHTML = '';
+  if (clear) body.innerHTML = '';
 
   // Generate a parseable object with the html:
-  var dv = document.createElement('div');
+  const dv = document.createElement('div');
   dv.innerHTML = html;
 
   // Handle edge case where innerHTML contains no tags, just text:
   if (dv.children.length === 0) {
-    o.innerHTML = html;
+    body.innerHTML = html;
     return;
   }
 
-  for (var i = 0; i < dv.children.length; i++) {
-    var c = dv.children[i];
+  for (let i = 0; i < dv.children.length; i++) {
+    const child = dv.children[i];
 
-    // n: new node with the same type as c
-    var n = document.createElement(c.nodeName);
+    // node: new node with the same type as child
+    const node = document.createElement(child.nodeName);
 
-    // copy all attributes from c to n
-    for (var j = 0; j < c.attributes.length; j++)
-      n.setAttribute(c.attributes[j].nodeName, c.attributes[j].nodeValue);
+    // copy all attributes from child to node
+    for (let j = 0; j < child.attributes.length; j++)
+      node.setAttribute(child.attributes[j].nodeName, child.attributes[j].nodeValue);
 
     // If current node is a leaf, just copy the appropriate property (text or innerHTML)
-    if (c.children.length == 0) {
-      switch (c.nodeName) {
+    if (child.children.length == 0) {
+      switch (child.nodeName) {
         case 'SCRIPT':
-          if (c.text) n.text = c.text;
+          if (child.text) node.text = child.text;
           break;
         default:
-          if (c.innerHTML) n.innerHTML = c.innerHTML;
+          if (child.innerHTML) node.innerHTML = child.innerHTML;
           break;
       }
     }
     // If current node has sub nodes, call itself recursively:
-    else setHTML(n, c.innerHTML, false);
-    o.appendChild(n);
+    else setHTML(node, child.innerHTML, false);
+    body.appendChild(node);
   }
 }
 
