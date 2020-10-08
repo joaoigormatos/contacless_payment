@@ -1,4 +1,4 @@
-const { localStringToNumber } = require('./local-string-converter');
+const { localStringToNumber } = require('./currency-text-input');
 
 describe('localStringToNumber', () => {
   it('must convert a value matching the regex pattern', () => {

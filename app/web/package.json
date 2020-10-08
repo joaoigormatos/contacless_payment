@@ -9,6 +9,7 @@
   },
   "keywords": [],
   "author": "",
+  "type": "module",
   "license": "MIT",
   "jest": {
     "collectCoverage": true

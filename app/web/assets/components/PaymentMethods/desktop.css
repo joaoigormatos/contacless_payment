@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #f0f0f5;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 2.5%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  height: 80%;
+  border-radius: 20px;
+}
+
+.close {
+  z-index: 1;
+  color: #aaaaaa;
+  float: right;
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin-top: 5%;
+  margin-bottom: 10%;
+  font-size: 2rem;
+  color: #4f4f4f;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.container .card {
+  height: 300px;
+  position: relative;
+  cursor: pointer;
+}
+
+.container .card .face {
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+}
+
+.container .card .face.face1 {
+  position: relative;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+#card1 {
+  background: linear-gradient(
+    227.39deg,
+    rgba(81, 102, 185, 0.901042) -0.56%,
+    #1c2755 67.51%
+  );
+  color: #f0f0f5;
+}
+
+#card2 {
+  background: linear-gradient(
+    227.39deg,
+    rgba(255, 227, 155, 0.901042) -0.56%,
+    #ffd15e 67.51%
+  );
+  color: #4f4f4f;
+}
+
+#card1 img {
+  filter: invert(42%) sepia(93%) saturate(0%) hue-rotate(100deg)
+    brightness(1000%) contrast(119%);
+}
+
+.container .card:hover .face.face1 {
+  transform: translateX(150px);
+}
+
+.container .card .face.face1 .content {
+  width: 80%;
+  opacity: 0.4;
+  transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content {
+  opacity: 1;
+}
+
+.container .card .face.face1 .content h3 {
+  margin: 10px 0 0;
+  padding: 0;
+  text-align: right;
+  font-size: 1.5em;
+}
+
+.container .card .face.face2 {
+  bottom: 200px;
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s linear;
+  border-radius: 10px;
+}
+
+.container .card:hover .face.face2 {
+  transform: translateX(-150px);
+}
+
+.container .card .face.face2 .content p {
+  margin: 0;
+  padding: 0;
+}
+

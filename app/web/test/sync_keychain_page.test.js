@@ -35,7 +35,7 @@ describe('the sync_keychain.html', () => {
   it('must render a h1 inside the main', () => {
     const SUT = document.querySelector('body main .wrapper h2');
     expect(SUT).toBeTruthy();
-    expect(SUT.innerHTML).toBe('Bem vindo, Fabiano!');
+    expect(SUT.innerHTML).toBe('Bem vindo, <br>Fabiano!');
   });
   it('must render a image with class "keychain" inside the main wrapper', () => {
     const SUT = document.querySelector('body main .wrapper .keychain');
@@ -45,18 +45,4 @@ describe('the sync_keychain.html', () => {
     const SUT = document.querySelector('body main .wrapper .keychain');
     expect(SUT).toBeTruthy();
   });
-  // it('must render two buttons with class "btn" inside the main wrapper', () => {
-  //   const SUT = document.querySelectorAll(
-  //     'body main .wrapper .btn-container .btn'
-  //   );
-  //   expect(SUT.length).toBe(2);
-  // });
-  // it('must render a button with class "btn-blue" inside the main wrapper', () => {
-  //   const SUT = document.querySelectorAll(
-  //     'body main .wrapper .btn-container .btn-blue'
-  //   );
-  //   expect(SUT).toBeTruthy();
-  //   expect(SUT[0].innerHTML).toMatch(/(SEM CONTATO)/i);
-  //   expect(SUT[1].innerHTML).toMatch(/(USAR CÓDIGO)/i);
-  // });
 });
