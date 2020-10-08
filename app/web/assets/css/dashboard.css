@@ -1,0 +1,144 @@
+
+:root{
+  --dark-blue-color: #1C2755;
+  --blue-color:#5166B9;
+  --body-color:#E5E5E5;
+  --btn--color:#BDBDBD
+}
+
+p{
+  margin: 0;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: var(--body-color);
+}
+.headerContainer{
+  display:inline-block;
+  width: 100%;
+  height: 6rem;
+  font-weight: bold;
+  color: white;
+  background-image: linear-gradient( to right, var(--dark-blue-color), var(--blue-color));
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.btnContainer{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+.btn{
+  
+  font-weight: bold;
+  background: white;
+  border: none;
+  padding: 0.4rem;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--btn--color);
+  font-weight: bold;
+  box-shadow: -1px 4px 5px 5px rgba(0,0,0,0.05);
+
+}
+.btn img{
+  margin-bottom: 0.2rem;
+}
+.btn p {
+  margin-bottom: 0.2rem;
+}
+
+.menuHeaderContainer{
+  display: flex;
+  flex-direction: row;
+  margin-top: 0;
+}
+
+.switch{
+  position: relative;
+  display: inline-block;
+  width: 2.5rem;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 20px;
+}
+.switch::after{
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--dark-blue-color);
+  top: 1px;
+  transition: all 0.3s;
+
+}
+.checkbox:checked + .switch::after{
+  left: 30px;
+}
+.checkbox:checked +.switch{
+  background-color: #89939F;
+  
+  
+}
+.checkbox{
+  display: none;
+}
+.titleContainer{
+  display: inherit;
+  flex-direction: column;
+  font-size: 0.7rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.creditContainer{
+  display: inherit;
+  flex-direction: column;
+  font-size: 0.7rem;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+
+.sideText{
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+
+.toggleButtonContainer{
+  margin-top: 0.2rem;
+}
+.balanceContainer{
+  display: inherit;
+  flex-direction: row;
+  font-weight: 50;
+}
+#balanceHider{
+  position: relative;
+  top: -4px;
+  left: 6px;
+}
+
+.containerCard{
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: 80%;
+  height: 35vh;
+  background-color: var(--body-color);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: -1px 4px 5px 4px rgba(0,0,0,0.05);
+
+}

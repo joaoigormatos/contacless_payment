@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <script defer src="../assets/js/dashboard.js"></script>
+</head>
+
+<body>
+
+  <header class="headerContainer">
+    <p class="sideText">Bem vindo, Fabiano</p>
+    <div class="menuHeaderContainer">
+      <div class="titleContainer">
+        <p>Desativar Crédito</p>
+        <div class="toggleButtonContainer">
+
+
+          <input type="checkbox" id="toggle" class="checkbox">
+          <label for="toggle" class="switch"></label>
+        </div>
+
+      </div>
+      <div class="creditContainer">
+        <p>Saldo</p>
+        <div class="balanceContainer">
+          <span id="balanceValue">R$ 300,00 </span>
+          <img id="balanceHider" src="../assets//icons/eye.svg" alt="eye icon">
+        </div>
+      </div>
+
+    </div>
+    <div class="balanceContainer"></div>
+  </header>
+  <main>
+    <div class="btnContainer">
+      <button class="btn">
+        <!--Place an icon here-->
+        <img src="../assets/icons/money-transfer.svg" alt=" money transfer">
+        <p>Adicionar saldo</p>
+
+      </button>
+      <button class="btn">
+        <img src="../assets/icons/money-transfer-coin.svg" alt="change credit card">
+        <p>Trocar Cartão</p>
+      </button>
+      <button class="btn">
+        <img src="../assets/icons/chat-bubbles-with-ellipsis.svg" alt="">
+        <p> Pedir Ajudar</p>
+      </button>
+    </div>
+    <div class="containerCard limitContainer">
+      <div class="ltdContainer">
+        <h3>Limite de transação diária</h3>
+        <p>R$ <span class="lt">0,00</span></p>
+      </div>
+      <div class="ltdContainer">
+        <h3>Limite de transação diária</h3>
+        <p>R$ <span class="lt">0,00</span></p>
+      </div>
+    </div>
+    <div class="containerCard hourContainer"></div>
+    <div class="containerCard chartContainer"></div>
+
+  </main>
+</body>
+
+</html>
