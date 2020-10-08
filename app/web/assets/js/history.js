@@ -146,3 +146,37 @@ function renderHistoryCards(containerId) {
     parent.appendChild(card)
   });
 };
+
+// Renderiza o modal
+function renderModal() {
+  const modalPlace = document.querySelector('#modal');
+
+  const modalPanel = document.createElement('div');
+  modalPanel.id = 'modal-panel';
+
+  const modal = document.createElement('div');
+  modal.id = 'modal-container';
+
+  const title = document.createElement('h2');
+  title.innerText = 'Histórico de pagamentos';
+  modal.appendChild(title);
+
+  const cardsContainer = document.createElement('div');
+  cardsContainer.id = 'cards-container';
+
+  const closeButton = document.createElement('button');
+  closeButton.id = 'close-btn';
+  closeButton.innerText = 'X';
+
+  closeButton.addEventListener('click', () => {
+    modalPanel.remove();
+  })
+  
+  modalPanel.appendChild(modal);
+  modal.appendChild(cardsContainer);
+  modal.appendChild(closeButton);
+
+  modalPlace.appendChild(modalPanel);
+  
+  renderHistoryCards('cards-container');
+}
