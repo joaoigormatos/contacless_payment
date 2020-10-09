@@ -66,7 +66,7 @@ href="../assets/components/PaymentMethods/mobile.css"
 <div class="container">
   <h2>Método para pagamentos</h2>
   <div class="scene scene--card">
-    <div id="credit" class="card">
+    <div id="credit" class="card" onclick="flipCard(this)">
       <div class="face face--front">
         <img
           height="80"
@@ -84,7 +84,7 @@ href="../assets/components/PaymentMethods/mobile.css"
     </div>
   </div>
   <div class="scene scene--card">
-    <div id="prepaid" class="card">
+    <div id="prepaid" class="card" onclick="flipCard(this)">
       <div class="face face--front">
         <img
           height="80"

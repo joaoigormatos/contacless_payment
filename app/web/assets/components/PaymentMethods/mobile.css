@@ -4,15 +4,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
-  font-family: sans-serif;
-}
-
 .container {
   display: grid;
   justify-items: center;
 }
-
 
 h2 {
   margin-top: 5%;
