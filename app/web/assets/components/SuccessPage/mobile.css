@@ -1,0 +1,13 @@
+#success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#success p {
+  text-align: center;
+}
+
+#success img {
+  margin: 10%;
+}

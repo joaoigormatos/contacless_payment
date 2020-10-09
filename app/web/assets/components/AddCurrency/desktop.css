@@ -129,3 +129,22 @@ button.btn-yellow {
   background: linear-gradient(227.39deg, rgba(255, 227, 155, 0.901042) -0.56%, #FFD15E 67.51%);
 }
 
+#success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#success p {
+  text-align: center;
+}
+
+#success img {
+  margin: 5%;
+  width: 15%;
+}
+
+#boleto-link-btn {
+  background-color: #384887;
+  color: #f0f0f5;
+}
