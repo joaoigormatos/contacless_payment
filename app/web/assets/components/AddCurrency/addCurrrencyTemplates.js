@@ -13,10 +13,10 @@ href="../assets/components/AddCurrency/desktop.css"
       <h3>Informe o valor</h3>
       <input dir="rtl" type="currency" value="" placeholder="R$ 0,00" />
       <div class="btn-container">
-        <button id="credit" class="btn btn-yellow">
+        <button id="credit" class="btn btn-yellow" onclick="sendValue(this)">
           Cartão de crédito
         </button>
-        <button id="boleto" class="btn btn-yellow">Boleto</button>
+        <button id="boleto" class="btn btn-yellow" onclick="sendValue(this)">Boleto</button>
       </div>
     </div>
   </main>
@@ -37,8 +37,8 @@ href="../assets/components/AddCurrency/desktop.css"
   <h3>Informe o valor</h3>
   <input dir="rtl" type="currency" value="" placeholder="R$ 0,00" />
   <div class="btn-container">
-    <button id="credit" class="btn btn-yellow">Cartão de crédito</button>
-    <button id="boleto" class="btn btn-yellow">Boleto</button>
+    <button id="credit" class="btn btn-yellow" onclick="sendValue(this)" >Cartão de crédito</button>
+    <button id="boleto" class="btn btn-yellow" onclick="sendValue(this)" >Boleto</button>
   </div>
 </div>
 </main>

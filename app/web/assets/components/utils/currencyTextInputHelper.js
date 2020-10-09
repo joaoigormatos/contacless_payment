@@ -1,7 +1,4 @@
 const currencyInput = document.querySelector('input[type="currency"]');
-const creditButton = document.getElementById('credit');
-const boletoButton = document.getElementById('boleto');
-
 const currency = 'BRL';
 
 const localStringToNumber = (value) => {
@@ -27,26 +24,16 @@ const onBlur = (e) => {
     : '';
 };
 
-const sendCreditValue = () => {
+const sendValue = (element) => {
   const { value } = currencyInput;
-  if (!value) {
-    return false;
+  if (!value) return false;
+  if (element.id === 'credit') {
+    console.log(`Valor de ${value} adicionados na conta`);
+  } else {
+    console.log(`Valor de ${value} gerados no boleto`);
   }
-  console.log(`Valor de ${value} adicionados na conta`);
   currencyInput.value = null;
 };
-
-const sendBoletoValue = () => {
-  const { value } = currencyInput;
-  if (!value) {
-    return false;
-  }
-  console.log(`Valor de ${value} gerados no boleto`);
-  currencyInput.value = null;
-};
-
-creditButton.onclick = sendCreditValue;
-boletoButton.onclick = sendBoletoValue;
 
 currencyInput.addEventListener('focus', onFocus);
 currencyInput.addEventListener('blur', onBlur);
