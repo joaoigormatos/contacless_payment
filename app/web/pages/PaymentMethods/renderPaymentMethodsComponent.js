@@ -1,6 +1,3 @@
-import { mobileHTML, desktopHTML } from './paymentMethodsTemplates.js';
-import setHTML from '../utils/setHTML.js';
-
 const renderMobile = () => {
   const body = document.body;
   const main = document.createElement('main');
@@ -8,14 +5,9 @@ const renderMobile = () => {
 
   renderContent(main);
 
-  const script = document.createElement('script');
-  script.type = 'module';
-  script.src = '../assets/components/utils/cardFlipperHelper.js';
-  main.appendChild(script);
-
   const style = document.createElement('link');
   style.rel = 'stylesheet';
-  style.href = '../assets/components/PaymentMethods/mobile.css';
+  style.href = './mobile.css';
   body.appendChild(style);
 };
 
@@ -45,12 +37,12 @@ const renderDesktop = () => {
 
   const modalScript = document.createElement('script');
   modalScript.type = 'module';
-  modalScript.src = '../assets/components/utils/modalHandler.js';
+  modalScript.src = '../../assets/js/modalHandler.js';
   body.appendChild(modalScript);
 
   const style = document.createElement('link');
   style.rel = 'stylesheet';
-  style.href = '../assets/components/PaymentMethods/desktop.css';
+  style.href = './desktop.css';
   body.appendChild(style);
 };
 
@@ -88,6 +80,9 @@ const renderCard = (container, cardType, cardTypeTitle, backText) => {
   const card = document.createElement('div');
   card.id = cardType;
   card.classList.add('card');
+  if (window.innerWidth <= 400) {
+    card.onclick = function(){card.classList.toggle('is-flipped')}
+  }
   scene.appendChild(card);
 
   const frontFace = document.createElement('div');
@@ -98,7 +93,7 @@ const renderCard = (container, cardType, cardTypeTitle, backText) => {
   const image = document.createElement('img');
   image.height = '80';
   image.width = '80';
-  image.src = '../assets/images/plus-icon.svg';
+  image.src = '../../assets/images/plus-icon.svg';
   frontFace.appendChild(image);
 
   const cardTitle = document.createElement('h3');
