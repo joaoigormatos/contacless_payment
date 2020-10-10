@@ -7,12 +7,12 @@ export const renderMobile = () => {
 
   const head = document.head;
   const style = document.createElement('link');
-  style.id = 'mobile'
+  style.id = 'mobile';
   style.rel = 'stylesheet';
   style.href = './mobile.css';
   head.appendChild(style);
 
-  return document
+  return document;
 };
 
 export const renderSuccessScreen = (main) => {
@@ -33,11 +33,11 @@ export const renderSuccessScreen = (main) => {
   const message = document.createElement('p');
   message.id = 'success-message';
   success.appendChild(message);
+
+  return main;
 };
 
-export const renderDesktop = () => {
-  const body = document.body;
-
+export const renderModal = (body) => {
   const modalOpener = document.createElement('button');
   modalOpener.id = 'myBtn';
   modalOpener.innerHTML = 'OPEN MODAL';
@@ -57,17 +57,26 @@ export const renderDesktop = () => {
   modalCloseButton.innerHTML = '&times';
   modalContent.appendChild(modalCloseButton);
 
+  return body;
+};
+
+export const renderDesktop = () => {
+  const modalContent = renderModal(document.body);
+
   renderContent(modalContent);
 
   const modalScript = document.createElement('script');
   modalScript.type = 'module';
   modalScript.src = '../../assets/js/modalHandler.js';
-  body.appendChild(modalScript);
+  document.body.appendChild(modalScript);
 
   const style = document.createElement('link');
+  style.id = 'desktop';
   style.rel = 'stylesheet';
   style.href = './desktop.css';
-  body.appendChild(style);
+  document.head.appendChild(style);
+
+  return document;
 };
 
 export const renderContent = (main) => {
@@ -115,7 +124,7 @@ export const renderContent = (main) => {
   script.src = '../../assets/js/currencyTextInputHelper.js';
   main.appendChild(script);
 
-  return main
+  return main;
 };
 
 if (window.innerWidth <= 400) {
