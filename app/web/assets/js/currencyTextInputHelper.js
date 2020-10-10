@@ -7,7 +7,7 @@ const creditButton = document.getElementById('credit');
 const boletoButton = document.getElementById('boleto');
 const currency = 'BRL';
 
-const localStringToNumber = (value) => {
+export const localStringToNumber = (value) => {
   return Number(String(value).replace(/[^0-9.-]+/g, ''));
 };
 
