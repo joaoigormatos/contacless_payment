@@ -17,50 +17,6 @@ afterEach(() => {
 });
 
 describe('renderContent', () => {
-  it('must throw error if card type is not provided', () => {
-    document.body.innerHTML = '';
-    expect(() =>
-      new PaymentMethodsComponent().renderCard(
-        document.body,
-        cardType,
-        null,
-        cardBackText
-      )
-    ).toThrow(Error('A card card type title must be provided.'));
-  });
-  it('must throw error if card type title is not provided', () => {
-    document.body.innerHTML = '';
-    expect(() =>
-      new PaymentMethodsComponent().renderCard(
-        document.body,
-        null,
-        cardTypeTitle,
-        cardBackText
-      )
-    ).toThrow(Error('A card type must be provided.'));
-  });
-  it('must throw error if card type is not provided', () => {
-    document.body.innerHTML = '';
-    expect(() =>
-      new PaymentMethodsComponent().renderCard(
-        null,
-        cardType,
-        cardTypeTitle,
-        cardBackText
-      )
-    ).toThrow(Error('A container must be provided for the card.'));
-  });
-  it('must throw error if card type title is not provided', () => {
-    document.body.innerHTML = '';
-    expect(() =>
-      new PaymentMethodsComponent().renderCard(
-        document.body,
-        cardType,
-        cardTypeTitle,
-        null
-      )
-    ).toThrow(Error('A card back text must be provided.'));
-  });
   it('must render a div with class "scene" and "scene--card"', () => {
     const SUT = sut.querySelector('div');
     expect(SUT.classList.contains('scene')).toBeTruthy();

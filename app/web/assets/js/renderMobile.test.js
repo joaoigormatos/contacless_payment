@@ -12,8 +12,17 @@ describe('renderMobile', () => {
   it('must render a main inside the body', () => {
     expect(sut.body.querySelector('main')).toBeTruthy();
   });
-  it.todo(
-    'must call the function renderContent passing the main element as argument'
+  it(
+    'must call the function renderContent passing the main element as argument',
+    () => {
+      document.body.innerHTML = '';
+      const component = new CustomComponent();
+      const spy = jest.spyOn(component, 'renderContent');
+      component.renderMobile();
+      const main = document.querySelector('main');
+      expect(spy).toHaveBeenCalled();
+      expect(spy).toHaveBeenCalledWith(main);
+    }
   );
   it('must render a link with mobile css inside the head', () => {
     const SUT = sut.getElementById('mobile');

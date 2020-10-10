@@ -22,6 +22,13 @@ describe('renderContent', () => {
         expect(SUT.innerHTML).toBe('Método para pagamentos');
       });
     });
-    it.todo('must call renderCard method twice');
+    it('must call renderCard method twice', () => {
+      document.body.innerHTML = '';
+      const component = new PaymentMethodsComponent();
+      const spy = jest.spyOn(component, 'renderCard');
+      component.renderContent(document.body);
+      expect(spy).toHaveBeenCalled();
+      expect(spy).toHaveBeenCalledTimes(2);
+    });
   });
 });
