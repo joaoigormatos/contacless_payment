@@ -18,7 +18,7 @@ body {
   background-color: var(--white);
 }
 
-.back-arrow {
+.back-arrow, .back-arrow-white {
   background: transparent;
   border: none;
   outline: none;
@@ -33,4 +33,9 @@ body {
   background: url('../images/left-arrow.svg');
 
   cursor: pointer;
+}
+
+.back-arrow-white {
+  background: url('../images/left-arrow-white.svg');
+
 }
