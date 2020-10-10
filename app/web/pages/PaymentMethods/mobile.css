@@ -92,11 +92,25 @@ h2 {
 .face--back {
   background: #f0f0f5;
   transform: rotateY(180deg);
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+  ". . . . . . ."
+  ". text text text text text ."
+  ". text text text text text ."
+  ". text text text text text ."
+  ". . . . . . ."
+  ". . . . continue continue .";
 }
 
 .face--back p {
-  padding-top: 10%;
-  padding-left: 10%;
-  padding-right: 10%;
+  grid-area: text;
+  font-size: 0.9rem;
+}
+
+.face--back a {
+  grid-area: continue;
+  color: #1c2755;
 }

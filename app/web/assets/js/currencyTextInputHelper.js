@@ -1,6 +1,6 @@
 import {
   handleSuccess,
-} from '../SuccessPage/successPage.js';
+} from '../../pages/SuccessPage/successPage.js';
 
 const currencyInput = document.querySelector('input[type="currency"]');
 const creditButton = document.getElementById('credit');

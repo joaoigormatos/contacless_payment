@@ -67,7 +67,7 @@ const renderContent = (main) => {
     container,
     'prepaid',
     'Pré-pago',
-    'Se não quiser registrar um cartão de crédito, vá de pré-pago! Adicione a quantia que desejar na carteira virtual, tanto por cartão ou boleto.'
+    'Se não quiser registrar um cartão de crédito, vá de pré-pago! Adicione na carteira virtual, tanto por cartão ou boleto.'
   );
 };
 
@@ -80,9 +80,6 @@ const renderCard = (container, cardType, cardTypeTitle, backText) => {
   const card = document.createElement('div');
   card.id = cardType;
   card.classList.add('card');
-  if (window.innerWidth <= 400) {
-    card.onclick = function(){card.classList.toggle('is-flipped')}
-  }
   scene.appendChild(card);
 
   const frontFace = document.createElement('div');
@@ -108,6 +105,15 @@ const renderCard = (container, cardType, cardTypeTitle, backText) => {
   const backFaceText = document.createElement('p');
   backFaceText.innerHTML = backText;
   backFace.appendChild(backFaceText);
+
+  if (window.innerWidth <= 400) {
+    frontFace.onclick = function(){card.classList.toggle('is-flipped')}
+    const continueButton = document.createElement('a');
+    continueButton.innerHTML = "Continuar"
+    continueButton.onclick = function(){window.alert("Proxima pagina!")}
+    backFace.appendChild(continueButton)
+  }
+
 };
 
 if (window.innerWidth <= 400) {

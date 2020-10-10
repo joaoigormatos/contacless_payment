@@ -8,7 +8,7 @@ body {
   background-color: #f0f0f5;
 }
 
-.wrapper {
+.modal {
   min-height: 100vh;
   margin: 0;
   padding-left: 30px;
@@ -86,19 +86,27 @@ button.btn-yellow {
   background-color: #ffd15e;
 }
 
-#success {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#success p {
-  text-align: center;
+#success h2 {
+  margin-top: 5%;
+  color: #577192;
 }
 
 #success img {
-  margin: 5%;
-  width: 15%;
+  width: 25%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15%;
+}
+
+#success p {
+  margin-top: 2%;
+  text-align: center;
+  color: #4f4f4f;
+}
+
+#success h3 {
+  margin-top: 10%;
+  color: #4f4f4f;
 }
 
 #boleto-link-btn {
@@ -106,8 +114,7 @@ button.btn-yellow {
   color: #f0f0f5;
 }
 
-button.btn-blue {
-  width: 50%;
+#success .btn-blue {
   background-color: #384887;
   color: #f0f0f5;
 }

@@ -7,7 +7,7 @@ const renderMobile = () => {
 
   const style = document.createElement('link');
   style.rel = 'stylesheet';
-  style.href = '../assets/components/AddCurrency/mobile.css';
+  style.href = './mobile.css';
   body.appendChild(style);
 };
 
@@ -15,23 +15,20 @@ const renderSuccessScreen = (main) => {
   const success = document.createElement('div');
   success.id = 'success';
   success.classList.add('hidden');
+  success.style.display = 'none';
   main.appendChild(success);
+
+  const image = document.createElement('img');
+  image.src = '../../assets/images/success-icon.svg';
+  success.appendChild(image);
 
   const title = document.createElement('h2');
   title.id = 'success-header';
   success.appendChild(title);
 
-  const image = document.createElement('img');
-  image.src = '../assets/images/success-icon.svg';
-  success.appendChild(image);
-
   const message = document.createElement('p');
   message.id = 'success-message';
   success.appendChild(message);
-
-  const backButton = document.createElement('h3');
-  backButton.innerHTML = 'Voltar';
-  success.appendChild(backButton);
 };
 
 const renderDesktop = () => {
@@ -60,12 +57,12 @@ const renderDesktop = () => {
 
   const modalScript = document.createElement('script');
   modalScript.type = 'module';
-  modalScript.src = '../assets/components/utils/modalHandler.js';
+  modalScript.src = '../../assets/js/modalHandler.js';
   body.appendChild(modalScript);
 
   const style = document.createElement('link');
   style.rel = 'stylesheet';
-  style.href = '../assets/components/AddCurrency/desktop.css';
+  style.href = './desktop.css';
   body.appendChild(style);
 };
 
@@ -111,7 +108,7 @@ const renderContent = (main) => {
 
   const script = document.createElement('script');
   script.type = 'module';
-  script.src = '../assets/components/utils/currencyTextInputHelper.js';
+  script.src = '../../assets/js/currencyTextInputHelper.js';
   main.appendChild(script);
 };
 
