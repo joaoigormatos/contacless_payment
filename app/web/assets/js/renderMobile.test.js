@@ -2,7 +2,7 @@ import CustomComponent from './CustomComponent';
 
 let sut;
 beforeEach(() => {
-  sut = CustomComponent.renderMobile();
+  sut = new CustomComponent().renderMobile();
 });
 afterEach(() => {
   document.body.innerHTML = '';

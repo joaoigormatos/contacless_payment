@@ -2,7 +2,7 @@ import CustomComponent from './CustomComponent';
 
 let sut;
 beforeEach(() => {
-  sut = CustomComponent.renderDesktop();
+  sut = new CustomComponent().renderDesktop();
 });
 afterEach(() => {
   document.body.innerHTML = '';
