@@ -1,8 +1,8 @@
-import { renderContent, renderMobile, renderDesktop } from './renderAddCurrencyComponent';
+import AddCurrencyComponent from './AddCurrencyComponent';
 
 let sut;
 beforeEach(() => {
-  sut = renderContent(document.body);
+  sut = new AddCurrencyComponent().renderContent(document.body);
 });
 afterEach(() => {
   document.body.innerHTML = '';

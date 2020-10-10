@@ -1,8 +1,8 @@
-import { renderDesktop } from './renderAddCurrencyComponent';
+import CustomComponent from './CustomComponent';
 
 let sut;
 beforeEach(() => {
-  sut = renderDesktop(document);
+  sut = CustomComponent.renderDesktop();
 });
 afterEach(() => {
   document.body.innerHTML = '';

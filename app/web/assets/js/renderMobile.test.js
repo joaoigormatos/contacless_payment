@@ -1,8 +1,8 @@
-import { renderMobile } from './renderAddCurrencyComponent';
+import CustomComponent from './CustomComponent';
 
 let sut;
 beforeEach(() => {
-  sut = renderMobile(document);
+  sut = CustomComponent.renderMobile();
 });
 afterEach(() => {
   document.body.innerHTML = '';
@@ -16,7 +16,7 @@ describe('renderMobile', () => {
     'must call the function renderContent passing the main element as argument'
   );
   it('must render a link with mobile css inside the head', () => {
-    const SUT = sut.getElementById('mobile')
+    const SUT = sut.getElementById('mobile');
     expect(SUT).toBeTruthy();
     expect(SUT.rel).toBe('stylesheet');
     expect(SUT.href).toBe('http://localhost/mobile.css');

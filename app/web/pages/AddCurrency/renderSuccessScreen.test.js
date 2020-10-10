@@ -1,4 +1,4 @@
-import AddCurrencyComponent from './renderAddCurrencyComponent';
+import AddCurrencyComponent from './AddCurrencyComponent';
 
 let sut;
 beforeEach(() => {
