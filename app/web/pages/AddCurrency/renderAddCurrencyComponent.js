@@ -57,18 +57,20 @@ export const renderModal = (body) => {
   modalCloseButton.innerHTML = '&times';
   modalContent.appendChild(modalCloseButton);
 
-  return body;
+  return modalContent;
 };
 
 export const renderDesktop = () => {
-  const modalContent = renderModal(document.body);
+  const body = document.body;
+
+  const modalContent = renderModal(body);
 
   renderContent(modalContent);
 
   const modalScript = document.createElement('script');
   modalScript.type = 'module';
   modalScript.src = '../../assets/js/modalHandler.js';
-  document.body.appendChild(modalScript);
+  body.appendChild(modalScript);
 
   const style = document.createElement('link');
   style.id = 'desktop';
