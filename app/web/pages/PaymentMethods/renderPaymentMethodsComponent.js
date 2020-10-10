@@ -107,13 +107,16 @@ const renderCard = (container, cardType, cardTypeTitle, backText) => {
   backFace.appendChild(backFaceText);
 
   if (window.innerWidth <= 400) {
-    frontFace.onclick = function(){card.classList.toggle('is-flipped')}
+    frontFace.onclick = function () {
+      card.classList.toggle('is-flipped');
+    };
     const continueButton = document.createElement('a');
-    continueButton.innerHTML = "Continuar"
-    continueButton.onclick = function(){window.alert("Proxima pagina!")}
-    backFace.appendChild(continueButton)
+    continueButton.innerHTML = 'Continuar';
+    continueButton.onclick = function () {
+      window.alert('Proxima pagina!');
+    };
+    backFace.appendChild(continueButton);
   }
-
 };
 
 if (window.innerWidth <= 400) {

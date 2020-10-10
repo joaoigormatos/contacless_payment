@@ -1,7 +1,7 @@
 class CustomComponent {
-  static renderContent() {}
+  renderContent() {}
 
-  static renderModal(body) {
+  renderModal(body) {
     const modalOpener = document.createElement('button');
     modalOpener.id = 'myBtn';
     modalOpener.innerHTML = 'OPEN MODAL';
@@ -24,7 +24,7 @@ class CustomComponent {
     return modalContent;
   }
 
-  static renderMobile() {
+  renderMobile() {
     const body = document.body;
     const main = document.createElement('main');
     body.appendChild(main);
@@ -41,7 +41,7 @@ class CustomComponent {
     return document;
   }
 
-  static renderDesktop() {
+  renderDesktop() {
     const body = document.body;
 
     const modalContent = this.renderModal(body);
@@ -62,7 +62,7 @@ class CustomComponent {
     return document;
   }
 
-  static renderComponent() {
+  renderComponent() {
     if (window.innerWidth <= 400) {
       this.renderMobile();
     } else {
