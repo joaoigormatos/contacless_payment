@@ -1,3 +1,38 @@
+:root {
+  --main: #384887;
+  --white: #F0F0F5;
+  --black: #111111;
+  --secundary: #577192;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--white);
+}
+
+.back-arrow {
+  background: transparent;
+  border: none;
+  outline: none;
+
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  width: 30px;
+  height: 30px;
+
+  background: url('../images/left-arrow.svg');
+
+  cursor: pointer;
+}
+
 header {
   padding-top: 48px;
 

@@ -1,0 +1,44 @@
+#modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+}
+
+#card {
+  background: linear-gradient(227.39deg, rgba(81, 102, 185, 0.901042) -0.56%, #1C2755 67.51%);
+  width: 80%;
+  border-radius: 15px;
+  min-width: 300px;
+}
+
+#topDiv {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  align-items: flex-end;
+  padding-bottom: 5vw;
+}
+
+#topDiv img { width: 75px; }
+
+#bottonDiv {
+  display: flex;
+  flex-direction: column;
+  color: #F0F0F5;
+  margin: 30px;
+}
+
+#bottonDiv > span:nth-child(1) { font-size: 22px; }
+#bottonDiv > span:nth-child(2) { font-size: 14px; }
+#bottonDiv > span:nth-child(3) { font-size: 18px; }
+
+#bottonDiv > span span { margin-left: 165px; }
+
+#divCvcValidade {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.small { width: 42% }
