@@ -1,17 +1,21 @@
-const renderMobile = () => {
+export const renderMobile = () => {
   const body = document.body;
   const main = document.createElement('main');
   body.appendChild(main);
 
   renderContent(main);
 
+  const head = document.head;
   const style = document.createElement('link');
+  style.id = 'mobile'
   style.rel = 'stylesheet';
   style.href = './mobile.css';
-  body.appendChild(style);
+  head.appendChild(style);
+
+  return document
 };
 
-const renderSuccessScreen = (main) => {
+export const renderSuccessScreen = (main) => {
   const success = document.createElement('div');
   success.id = 'success';
   success.classList.add('hidden');
@@ -31,7 +35,7 @@ const renderSuccessScreen = (main) => {
   success.appendChild(message);
 };
 
-const renderDesktop = () => {
+export const renderDesktop = () => {
   const body = document.body;
 
   const modalOpener = document.createElement('button');
@@ -66,7 +70,7 @@ const renderDesktop = () => {
   body.appendChild(style);
 };
 
-const renderContent = (main) => {
+export const renderContent = (main) => {
   const container = document.createElement('div');
   container.id = 'container';
   container.classList.add('wrapper');
@@ -110,6 +114,8 @@ const renderContent = (main) => {
   script.type = 'module';
   script.src = '../../assets/js/currencyTextInputHelper.js';
   main.appendChild(script);
+
+  return main
 };
 
 if (window.innerWidth <= 400) {
