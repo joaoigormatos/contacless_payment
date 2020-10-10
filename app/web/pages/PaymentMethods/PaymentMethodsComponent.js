@@ -2,6 +2,11 @@ import CustomComponent from '../../assets/js/CustomComponent.js';
 
 class PaymentMethodsComponent extends CustomComponent {
   renderCard = (container, cardType, cardTypeTitle, backText) => {
+    if(!container) throw new Error('A container must be provided for the card.')
+    if(!cardType) throw new Error('A card type must be provided.')
+    if(!cardTypeTitle) throw new Error('A card card type title must be provided.')
+    if(!backText) throw new Error('A card back text must be provided.')
+    
     const scene = document.createElement('div');
     scene.classList.add('scene');
     scene.classList.add('scene--card');
@@ -47,6 +52,7 @@ class PaymentMethodsComponent extends CustomComponent {
       };
       backFace.appendChild(continueButton);
     }
+    return container;
   };
 
   renderContent = (main) => {
@@ -72,6 +78,7 @@ class PaymentMethodsComponent extends CustomComponent {
       'Pré-pago',
       'Se não quiser registrar um cartão de crédito, vá de pré-pago! Adicione na carteira virtual, tanto por cartão ou boleto.'
     );
+    return main;
   };
 }
 
