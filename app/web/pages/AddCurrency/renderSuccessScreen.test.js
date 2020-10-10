@@ -1,8 +1,8 @@
-import { renderSuccessScreen } from './renderAddCurrencyComponent';
+import AddCurrencyComponent from './renderAddCurrencyComponent';
 
 let sut;
 beforeEach(() => {
-  sut = renderSuccessScreen(document.body);
+  sut = new AddCurrencyComponent().renderSuccessScreen(document.body);
 });
 afterEach(() => {
   document.body.innerHTML = '';
