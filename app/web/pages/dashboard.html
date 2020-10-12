@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
   <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../assets/css/dashboard-media-querie.css">
+
   <script defer src="../assets/js/dashboard.js"></script>
 </head>
 
@@ -17,7 +19,6 @@
       <div class="titleContainer">
         <p>Desativar Crédito</p>
         <div class="toggleButtonContainer">
-
 
           <input type="checkbox" id="toggle" class="checkbox">
           <label for="toggle" class="switch"></label>
@@ -36,6 +37,7 @@
     <div class="balanceContainer"></div>
   </header>
   <main>
+
     <div class="btnContainer">
       <button class="btn">
         <!--Place an icon here-->
@@ -52,17 +54,42 @@
         <p> Pedir Ajudar</p>
       </button>
     </div>
-    <div class="containerCard limitContainer">
-      <div class="ltdContainer">
-        <h3>Limite de transação diária</h3>
-        <p>R$ <span class="lt">0,00</span></p>
+
+    <div class="controlsContainer">
+
+      <div class="containerCard limitContainer">
+        <div class="ltdContainer">
+          <h3>Limite de transação diária</h3>
+          <p>R$ <span class="lt">0,00</span></p>
+        </div>
+        <div class="ltdContainer ">
+          <h3>Limite de transação diária</h3>
+          <p>R$ <span class="lt">0,00</span></p>
+        </div>
       </div>
-      <div class="ltdContainer">
-        <h3>Limite de transação diária</h3>
-        <p>R$ <span class="lt">0,00</span></p>
+
+
+      <div class="containerCard hourContainer">
+        <h3>Controle do horário de pagamentos</h3>
+        <div class="daysOfWeekContainer">
+          <ul class="weekList">
+            <li class="weekItem" id="sunday"> <span class="weekItemText"> D </span> </li>
+            <li class="weekItem" id="monday"> <span class="weekItemText">S</span></li>
+            <li class="weekItem" id="tuesday"><span class="weekItemText"> T</span></li>
+            <li class="weekItem" id="wednesday"><span class="weekItemText">Q</span> </li>
+            <li class="weekItem" id="thursday"><span class="weekItemText">Q</span> </li>
+            <li class="weekItem" id="friday"><span class="weekItemText">S</span></li>
+            <li class="weekItem" id="saturday"><span class="weekItemText">S</span></li>
+          </ul>
+
+          <p>De <span class="hour">6:02</span></p>
+          <p>Até <span class="hour">18:03</span></p>
+        </div>
       </div>
     </div>
-    <div class="containerCard hourContainer"></div>
+
+
+
     <div class="containerCard chartContainer"></div>
 
   </main>

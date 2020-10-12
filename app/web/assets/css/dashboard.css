@@ -5,34 +5,39 @@
   --body-color:#E5E5E5;
   --btn--color:#BDBDBD
 }
+ body{
+    padding: 0;
+    margin: 3rem;
+    background-color: var(--body-color);
+    display: flex;
+    flex-direction: row;
+  }
 
-p{
-  margin: 0;
-}
-
-body{
-  padding: 0;
-  margin: 0;
-  background-color: var(--body-color);
-}
 .headerContainer{
-  display:inline-block;
-  width: 100%;
-  height: 6rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  height: 80vh;
   font-weight: bold;
   color: white;
   background-image: linear-gradient( to right, var(--dark-blue-color), var(--blue-color));
+  
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
 }
 
+
 .btnContainer{
-  margin-top: 1rem;
+  margin: 5rem;
+  
   display: flex;
   flex-direction: row;
   width: 100%;
   align-items: center;
-  justify-content: space-around;
 }
 .btn{
   
@@ -49,6 +54,8 @@ body{
   font-weight: bold;
   box-shadow: -1px 4px 5px 5px rgba(0,0,0,0.05);
 
+  margin-right: 1.2rem;
+  cursor: pointer;
 }
 .btn img{
   margin-bottom: 0.2rem;
@@ -88,7 +95,6 @@ body{
 .checkbox:checked +.switch{
   background-color: #89939F;
   
-  
 }
 .checkbox{
   display: none;
@@ -96,7 +102,7 @@ body{
 .titleContainer{
   display: inherit;
   flex-direction: column;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
   margin-top: 1rem;
   margin-left: 1rem;
 }
@@ -104,14 +110,19 @@ body{
 .creditContainer{
   display: inherit;
   flex-direction: column;
-  font-size: 0.7rem;
-  margin-top: 1rem;
-  margin-left: 1.5rem;
-}
-
-.sideText{
+  font-size: 0.5rem;
   margin-top: 1rem;
   margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+
+
+.sideText{
+  
+  font-size: 0.8rem;
+  margin-top: 2.5rem;
+  
 }
 
 
@@ -123,6 +134,13 @@ body{
   flex-direction: row;
   font-weight: 50;
 }
+
+.balanceContainer img {
+  width: 1rem;
+  height: 1rem;
+}
+
+
 #balanceHider{
   position: relative;
   top: -4px;
@@ -132,13 +150,109 @@ body{
 .containerCard{
   margin: 0 auto;
   margin-top: 1rem;
-  width: 80%;
+  width: 85%;
   height: 35vh;
-  background-color: var(--body-color);
+  background-color:white;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   box-shadow: -1px 4px 5px 4px rgba(0,0,0,0.05);
 
+}
+
+h3{
+  color: var(--dark-blue-color);
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 0.6rem;
+}
+.ltdContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.ltdContainer p {
+  color: #4F4F4F;
+  font-size: 0.9rem;
+}
+
+.lt {
+  font-size: 1.5rem;
+}
+
+
+.hourContainer{
+  display: flex;
+  font-weight: bold;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 10rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+.hourContainer h3{
+  font-size: 0.8rem;
+}
+
+.hourContainer p {
+  font-size: 0.8rem;
+  color: var(--body-color);
+}
+
+.hour{
+  font-size: 1.2rem; 
+   color: #4F4F4F;;
+
+}
+
+
+.weekList {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  justify-content: flex-start !important;
+  margin-top: 0.2rem;
+  align-self: flex-start;
+  padding: 0;
+}
+.weekItem{
+  display: inline-block;
+  background-color: var(--btn--color);
+  border-radius: 1.2rem;
+  color: white ;
+  text-align: center;
+  top: 1rem;
+  width: 1rem;
+  height: 1rem;
+  padding: 1px;
+  font-size: 0.5rem;
+  font-weight: bold;
+  margin-left: .5rem;
+}
+p{
+  margin: 0;
+}
+
+.weekItemText{
+  position: relative;
+  top: 0.2rem;
+  align-self: center;
+  justify-self: center;
+}
+
+
+
+
+.controlsContainer{
+  position: absolute;
+  top: 50px;
+  left: 65%;
+}
+
+
+.limitContainer{
+  
 }
