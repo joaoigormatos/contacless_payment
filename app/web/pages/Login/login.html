@@ -23,7 +23,7 @@
       </nav>
       <form id="login">
         <label for="cpf">CPF</label>
-        <input type="text" name="cpf">
+        <input type="text" name="cpf" maxlength="14">
         <label for="senha">Senha</label>
         <input type="password" name="senha">
         <button class="btn btn-blue" type="submit">Login</button>
@@ -33,16 +33,20 @@
         <input type="text" name="name">
         <label for="email">Email</label>
         <input type="email" name="email">
-        <label for="phone">Telefone</label>
-        <input type="text" name="phone">
+        <label for="phone">Celular</label>
+        <input type="text" name="phone" maxlength="15">
         <label for="cpf">CPF</label>
-        <input type="text" name="cpf">
+        <input type="text" name="cpf" maxlength="14">
+        <label for="senha">Crie uma senha</label>
+        <input type="password" name="senha">
+        <label for="senha">Confirme sua senha</label>
+        <input type="password" name="senha">
         <label for="cep">CEP</label>
-        <input type="text" name="cep">
+        <input type="text" name="cep" maxlength="9">
         <label for="address">Endereço</label>
         <input type="text" name="address">
         <label for="number">Numero</label>
-        <input type="text" name="number">
+        <input type="text" name="number" maxlength="6">
         <label for="complement">Complemento</label>
         <input type="text" name="complement">
         <label for="bairro">Bairro</label>
@@ -50,7 +54,7 @@
         <label for="city">Cidade</label>
         <input type="text" name="city">
         <label for="state">Estado</label>
-        <input type="text" name="estate">
+        <input type="text" name="state" maxlength="2">
         <button class="btn btn-blue" type="submit">Continuar Cadastro</button>
       </form>
     </section>

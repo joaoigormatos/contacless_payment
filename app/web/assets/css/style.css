@@ -87,3 +87,7 @@ button.btn-yellow { background-color: #FFD15E; }
   background-repeat: no-repeat;
 
 }
+
+form label:not(:nth-child(1)) {
+  margin-top: 20px;
+}
