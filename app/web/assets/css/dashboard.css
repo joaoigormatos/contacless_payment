@@ -5,16 +5,10 @@
   --body-color:#E5E5E5;
   --btn--color:#BDBDBD
 }
-<<<<<<< HEAD
 
  body{
-   box-sizing: border-box;
-=======
-html{
   box-sizing: border-box;
-}
- body{
->>>>>>> master
+
     padding: 0;
     margin: 3rem;
     background-color: var(--body-color);
@@ -306,8 +300,6 @@ p{
 
 .limitContainer{
   
-<<<<<<< HEAD
-=======
 }
 
 
@@ -559,5 +551,4 @@ p{
     left: 0;
   }
 
->>>>>>> master
 }
