@@ -63,7 +63,7 @@ class CustomComponent {
   }
 
   renderComponent() {
-    if (window.innerWidth <= 400) {
+    if (window.innerWidth <= 500) {
       this.renderMobile();
     } else {
       this.renderDesktop();
