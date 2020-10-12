@@ -2,11 +2,13 @@ import CustomComponent from '../../assets/js/CustomComponent.js';
 
 class PaymentMethodsComponent extends CustomComponent {
   renderCard = (container, cardType, cardTypeTitle, backText) => {
-    if(!container) throw new Error('A container must be provided for the card.')
-    if(!cardType) throw new Error('A card type must be provided.')
-    if(!cardTypeTitle) throw new Error('A card card type title must be provided.')
-    if(!backText) throw new Error('A card back text must be provided.')
-    
+    if (!container)
+      throw new Error('A container must be provided for the card.');
+    if (!cardType) throw new Error('A card type must be provided.');
+    if (!cardTypeTitle)
+      throw new Error('A card card type title must be provided.');
+    if (!backText) throw new Error('A card back text must be provided.');
+
     const scene = document.createElement('div');
     scene.classList.add('scene');
     scene.classList.add('scene--card');
@@ -41,7 +43,7 @@ class PaymentMethodsComponent extends CustomComponent {
     backFaceText.innerHTML = backText;
     backFace.appendChild(backFaceText);
 
-    if (window.innerWidth <= 400) {
+    if (window.innerWidth <= 1000) {
       frontFace.onclick = function () {
         card.classList.toggle('is-flipped');
       };
@@ -80,6 +82,36 @@ class PaymentMethodsComponent extends CustomComponent {
     );
     return main;
   };
+
+  renderDesktopSmall(){
+    const body = document.body;
+
+    const modalContent = this.renderModal(body);
+
+    this.renderContent(modalContent);
+
+    const modalScript = document.createElement('script');
+    modalScript.type = 'module';
+    modalScript.src = '../../assets/js/modalHandler.js';
+    body.appendChild(modalScript);
+
+    const style = document.createElement('link');
+    style.id = 'desktop';
+    style.rel = 'stylesheet';
+    style.href = './desktop-small.css';
+    document.head.appendChild(style);
+    return document;
+  }
+
+  renderComponent() {
+    if (window.innerWidth <= 500) {
+      this.renderMobile();
+    } else if (window.innerWidth <= 1000) {
+      this.renderDesktopSmall();
+    } else {
+      this.renderDesktop()
+    }
+  }
 }
 
 export default PaymentMethodsComponent;
