@@ -35,7 +35,6 @@ const cardData = {
   },
   show: {
     number: cardSpans[0],
-    name: cardSpans[1],
     cvc: cardSpans[2],
     validade: cardSpans[3],
     name: cardSpans[4]
