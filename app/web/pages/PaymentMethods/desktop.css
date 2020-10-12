@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #f0f0f5;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  padding-top: 2.5%; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  height: 80%;
+  border-radius: 20px;
+}
+
+.close {
+  z-index: 1;
+  color: #aaaaaa;
+  float: right;
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin-top: 5%;
+  margin-bottom: 20%;
+  font-size: 2rem;
+  color: #4f4f4f;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.container .card {
+  height: 15rem;
+  position: relative;
+  cursor: pointer;
+  display: grid;
+  justify-content: center;
+}
+
+.container .card .face {
+  width: 20rem;
+  height: 12.5rem;
+  transition: 0.5s;
+}
+
+.container .card .face--front {
+  position: relative;
+  background: #333;
+  white-space: pre-line;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . . . ."
+    ". image image . . ."
+    ". image image . . ."
+    ". . text text text ."
+    ". . text text text ."
+    ". . . . . .";
+}
+
+.face--front img {
+  grid-area: image;
+}
+
+.face--front h3 {
+  grid-area: text;
+}
+
+#credit .face--front{
+  background: linear-gradient(
+    227.39deg,
+    rgba(81, 102, 185, 0.901042) -0.56%,
+    #1c2755 67.51%
+  );
+  color: #f0f0f5;
+  padding: 0;
+}
+
+#prepaid .face--front{
+  background: linear-gradient(
+    227.39deg,
+    rgba(255, 227, 155, 0.901042) -0.56%,
+    #ffd15e 67.51%
+  );
+  color: #4f4f4f;
+}
+
+#credit img {
+  filter: invert(42%) sepia(93%) saturate(0%) hue-rotate(100deg)
+    brightness(1000%) contrast(119%);
+}
+
+.container .card:hover .face--front {
+  opacity: 1;
+  transform: translateX(10rem);
+}
+
+.container .card .face--front h3 {
+  margin: 10px 0 0;
+  padding: 0;
+  text-align: right;
+  font-size: 1.5em;
+}
+
+.container .card .face--back {
+  bottom: 200px;
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s linear;
+  border-radius: 10px;
+}
+
+.container .card:hover .face--back {
+  transform: translateX(-10rem);
+}
+
+.container .card .face--back p {
+  margin: 0;
+  padding: 0;
+}
+

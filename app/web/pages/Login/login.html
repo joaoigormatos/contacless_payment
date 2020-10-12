@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="login.css">
+  <title>DriveAndPay - Login</title>
+</head>
+<body>
+  <section id="content">
+    <header class="header">
+      <span>DriveAndPay</span>
+      <img id="logo"src="../../assets/images/logo.svg" alt="DriveAndPay"/>
+    </header>
+    <section id="container">
+      <nav>
+        <ul>
+          <li id="entrar" class="selected">Entrar</li>
+          <li id="cadastrar">Cadastrar</li>
+        </ul>
+      </nav>
+      <form id="login">
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" maxlength="14">
+        <label for="senha">Senha</label>
+        <input type="password" name="senha">
+        <button class="btn btn-blue" type="submit">Login</button>
+      </form>
+      <form id="cadastro">
+        <label for="name">Nome Completo</label>
+        <input type="text" name="name">
+        <label for="email">Email</label>
+        <input type="email" name="email">
+        <label for="phone">Celular</label>
+        <input type="text" name="phone" maxlength="15">
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" maxlength="14">
+        <label for="senha">Crie uma senha</label>
+        <input type="password" name="senha">
+        <label for="senha">Confirme sua senha</label>
+        <input type="password" name="senha">
+        <label for="cep">CEP</label>
+        <input type="text" name="cep" maxlength="9">
+        <label for="address">Endereço</label>
+        <input type="text" name="address">
+        <label for="number">Numero</label>
+        <input type="text" name="number" maxlength="6">
+        <label for="complement">Complemento</label>
+        <input type="text" name="complement">
+        <label for="bairro">Bairro</label>
+        <input type="text" name="bairro">
+        <label for="city">Cidade</label>
+        <input type="text" name="city">
+        <label for="state">Estado</label>
+        <input type="text" name="state" maxlength="2">
+        <button class="btn btn-blue" type="submit">Continuar Cadastro</button>
+      </form>
+    </section>
+  </section>
+  <aside class="desktopBackground"></aside>
+  <script src="login.js"></script>
+</body>
+</html>
