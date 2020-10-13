@@ -83,33 +83,35 @@ class PaymentMethodsComponent extends CustomComponent {
     return main;
   };
 
-  renderDesktopSmall(){
+  renderDesktopSmall() {
     const body = document.body;
 
     const modalContent = this.renderModal(body);
 
     this.renderContent(modalContent);
 
-    const modalScript = document.createElement('script');
-    modalScript.type = 'module';
-    modalScript.src = '../../assets/js/modalHandler.js';
-    body.appendChild(modalScript);
+    const mobileStyle = document.createElement('link');
+    mobileStyle.id = 'desktop';
+    mobileStyle.rel = 'stylesheet';
+    mobileStyle.href = './mobile.css';
+    document.head.appendChild(mobileStyle);
 
-    const style = document.createElement('link');
-    style.id = 'desktop';
-    style.rel = 'stylesheet';
-    style.href = './desktop-small.css';
-    document.head.appendChild(style);
     return document;
   }
 
   renderComponent() {
+    const globalStyle = document.createElement('link');
+    globalStyle.id = 'global';
+    globalStyle.rel = 'stylesheet';
+    globalStyle.href = '../../assets/css/style.css';
+    document.head.appendChild(globalStyle);
+
     if (window.innerWidth <= 500) {
       this.renderMobile();
     } else if (window.innerWidth <= 1000) {
       this.renderDesktopSmall();
     } else {
-      this.renderDesktop()
+      this.renderDesktop();
     }
   }
 }
