@@ -27,3 +27,4 @@ nav ul li:hover, nav ul li.selected {
 
 form#cadastro { display: none; }
 
+.error { border-color: red; }
