@@ -83,7 +83,7 @@ const handleSubmitLogin = (e) => {
       response.json()
         .then(data =>{
           const resultado = data.reduce((acumulador, user) => {
-            if (user.cpf === cpf && user.cpf === cpf) return true;
+            if (user.cpf === cpf && user.senha === senha) return true;
             return acumulador;
           },false)
 
@@ -92,7 +92,11 @@ const handleSubmitLogin = (e) => {
         });
     })
     .catch(e => console.log('Erro ao consultar o usuário: '+ e.message));
-  console.log(users);
+}
+
+const handleSubmitCadastro = (e) => {
+  e.preventDefault();
+  window.location.href = "../ContinuarCadastro/continuarcadastro.html";
 }
 
 menuEntrar.addEventListener('click', showLogin);
@@ -101,3 +105,4 @@ inputCEP.addEventListener('blur', (e) => consultaCEP(e));
 formLogin.addEventListener('keyup', (e) => validaForm(e));
 formCadastro.addEventListener('keyup', (e) => validaForm(e));
 formLogin.addEventListener('submit', (e) => handleSubmitLogin(e));
+formCadastro.addEventListener('submit', (e) => handleSubmitCadastro(e));

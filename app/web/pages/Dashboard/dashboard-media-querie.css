@@ -1,10 +1,15 @@
 @media only screen and (max-width: 600px){
+  html{
+    font-size: 16px;
+  }
+  
   body{
     padding: 0;
     margin: 0;
     background-color: var(--body-color);
     display: flex;
     flex-direction: column;
+    
   }
   
   .headerContainer{
@@ -220,11 +225,38 @@
     justify-self: center;
   }
 
-
+  .stateActive {
+    background-color: var(--dark-blue-color);
+  }
   .controlsContainer{
     position: relative;
     top: 0;
     left: 0;
   }
+  .chartContainer{
+    display: flex;
+    padding: 0rem;
+    font-size: 0.4rem;
+    justify-content: center;
+    align-items: center;
 
+  }
+
+  #historyChart{
+    width: 45%;
+  }
+
+  input[type="number"]{
+    width: 25%;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    color: #4F4F4F;
+    margin-left: 0.3rem;
+    border: none;
+    background-color: var(--body-color);
+  }
+  input[type="time"]{
+    
+    background-color: var(--body-color);
+  }
 }

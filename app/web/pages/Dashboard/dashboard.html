@@ -5,11 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
-  <link rel="stylesheet" href="../assets/css/dashboard.css">
-  <link rel="stylesheet" href="../assets/css/dashboard-media-querie.css">
+  <link rel="stylesheet" href="./dashboard.css">
+  <link rel="stylesheet" href="./dashboard-media-querie.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
-  <script defer src="../assets/js/dashboard.js"></script>
+  <script defer src="./dashboard.js"></script>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
         <p>Saldo</p>
         <div class="balanceContainer">
           <span id="balanceValue">R$ 300,00 </span>
-          <img id="balanceHider" src="../assets/icons/eye.svg" alt="eye icon">
+          <img id="balanceHider" src="../../assets/icons/eye.svg" alt="eye icon">
         </div>
       </div>
 
@@ -43,37 +44,50 @@
       <div class="btnContainer">
         <button class="btn">
           <!--Place an icon here-->
-          <img src="../assets/icons/money-transfer.svg" alt=" money transfer">
+          <img src="../../assets/icons/money-transfer.svg" alt=" money transfer">
           <p>Adicionar saldo</p>
   
         </button>
         <button class="btn">
-          <img src="../assets/icons/money-transfer-coin.svg" alt="change credit card">
+          <img src="../../assets/icons/money-transfer-coin.svg" alt="change credit card">
           <p>Trocar Cartão</p>
         </button>
+
         <a href="chat.html" style="text-decoration: none;">
           <button class="btn">
             <img src="../assets/icons/chat-bubbles-with-ellipsis.svg" alt="">
             <p> Pedir Ajudar</p>
           </button>
         </a>
+        
       </div>
   
-      <div class="containerCard chartContainer"></div>
+      <div class="containerCard chartContainer">
+        <canvas id="historyChart"></canvas>
+
+      </div>
   
 
     </div>
   
     <div class="controlsContainer">
 
-      <div class="containerCard limitContainer">
+      <div class="containerCard limitContainer" >
         <div class="ltdContainer">
+
           <h3>Limite de transação diária</h3>
-          <p>R$ <span class="lt">0,00</span></p>
+          <div class="ltdTextShow">
+            <label for="ltd">R$</label>
+            <input type="number" name="ltd" id="ltd" min="0" step="0.00" value="0.00">
+          </div>
+
         </div>
         <div class="ltdContainer ">
           <h3>Limite de transação mensal</h3>
-          <p>R$ <span class="lt">0,00</span></p>
+          <div class="ltdTextShow">
+            <label for="ltd">R$</label>
+            <input type="number" name="ltd" id="ltd" min="0" step="0.00" value="0.00">
+          </div>
         </div>
       </div>
 
@@ -84,19 +98,19 @@
           <ul class="weekList">
             <li class="weekItem" id="domingo"> <span class="weekItemText"> D </span> </li>
             <li class="weekItem" id="segunda"> <span class="weekItemText">S</span></li>
-            <li class="weekItem" id="terça"><span class="weekItemText"> T</span></li>
+            <li class="weekItem" id="terca"><span class="weekItemText"> T</span></li>
             <li class="weekItem" id="quarta"><span class="weekItemText">Q</span> </li>
             <li class="weekItem" id="quinta"><span class="weekItemText">Q</span> </li>
             <li class="weekItem" id="sexta"><span class="weekItemText">S</span></li>
-            <li class="weekItem" id="sábado"><span class="weekItemText">S</span></li>
+            <li class="weekItem" id="sabado"><span class="weekItemText">S</span></li>
           </ul>
           <div class="timeSetContainer">
             <label class="labelStyle" for="start">De</label>
-            <input type="text" name="start" id="start">
+            <input type="time" name="start" id="start">
           </div>
           <div class="timeSetContainer">
             <label class="labelStyle" for="until">Até</label>
-            <input  type="text" name="until" id="until">
+            <input  type="time" name="until" id="until" >
           </div>
 
        
