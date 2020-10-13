@@ -180,3 +180,16 @@ function renderModal() {
   
   renderHistoryCards('cards-container');
 }
+
+// navegação para o histórico
+const chartContainer = document.querySelector('.chartContainer');
+
+if(chartContainer) {
+  chartContainer.addEventListener('click', () => {
+    if(window.innerWidth < 500) {
+      document.location = 'http://127.0.0.1:5500/app/web/pages/history.html';
+    } else {
+      renderModal();
+    }
+  })
+}
