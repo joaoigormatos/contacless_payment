@@ -26,8 +26,8 @@ header #logo {
 }
 
 section#container {
-  padding: 30px;
-  max-width: 450px;
+  margin: 30px;
+  max-width: 415px;
 }
 
 form {
@@ -83,15 +83,14 @@ button.btn-yellow {
 }
 
 #content {
-  width: 450px;
-  min-height: 100vh;
+  width: 415px;
 }
 
 .desktopBackground {
   position: fixed;
   top: 0;
-  left: 450px;
-  width: calc(100vw - 450px);
+  left: 415px;
+  width: calc(100vw - 415px);
   height: 100vh;
   background-image: url('../../assets/images/backgroundPreview.png');
   flex: 1;
