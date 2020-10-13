@@ -24,10 +24,10 @@ const createInput = (name, type, father, div, length) => {
   const input = document.createElement('input');
   input.type = type;
   input.name = formatedName;
+  if (length) input.maxLength = length;
 
   if (div) {
     const div = createDiv();
-    input.maxLength = length;
     div.appendChild(label);
     div.appendChild(input);
   } else {
@@ -57,19 +57,21 @@ const createCard = (father) => {
   const number = document.createElement('span');
   const cvc = document.createElement('span');
   const validade = document.createElement('span');
+  const cvcValidade = document.createElement('span');
   const name = document.createElement('span');
 
-  number.innerText = "5555 5555 5555 5555";
-  cvc.innerText = "451";
-  validade.innerText = "10/20";
-  name.innerText = "Joao A R Silva";
+  number.innerText = "4444 4444 4444 4444";
+  cvc.innerText = "717";
+  validade.innerText = "03/30";
+  name.innerText = "LUIS I L SILVA";
 
   father.appendChild(topDiv);
   father.appendChild(bottonDiv);
   topDiv.appendChild(logo);
   bottonDiv.appendChild(number);
-  cvc.appendChild(validade);
-  bottonDiv.appendChild(cvc)
+  cvcValidade.appendChild(cvc);
+  cvcValidade.appendChild(validade);
+  bottonDiv.appendChild(cvcValidade)
   bottonDiv.appendChild(name);
 }
 

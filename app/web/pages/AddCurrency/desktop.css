@@ -100,7 +100,7 @@ input:focus {
 }
 
 .btn-container {
-  width: 40%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-self: center;
