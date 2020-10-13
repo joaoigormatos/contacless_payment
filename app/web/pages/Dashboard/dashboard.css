@@ -119,15 +119,15 @@
   margin-bottom: 0.4rem;
 }
 
-input[type='text']{
+input[type='time']{
   border: none;
   text-emphasis: none;
-  font-size: 1.2rem;
-  width: 20%;
+  font-size: 0.9rem;
+  width: 50%;
   color: #4F4F4F;
 }
 
-input[type='text']:focus{
+input[type='time']:focus{
   outline-width: 0;
   border-bottom: 1.5px solid #1C2755;
 }
@@ -216,6 +216,11 @@ h3{
   font-size: 0.9rem;
 }
 
+.ltdTextShow{
+  color: #4F4F4F;
+
+}
+
 .lt {
   font-size: 1.5rem;
 }
@@ -299,12 +304,40 @@ p{
 
 
 .limitContainer{
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.ltdTextShow{
+  display: inherit;
+  justify-content: center;
 }
 
+.stateActive {
+  background-color: var(--dark-blue-color);
+}
 
+input[type="number"]{
+  width: 25%;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  color: #4F4F4F;
+  margin-left: 0.3rem;
+  border: none;
+  background-color: none;
+}
+input[type="number"]:focus{
 
+  outline-style: none;
+  border-bottom: 1.5px solid #1C2755;
 
+}
+
+.chartContainer{
+  display: flex;
+  padding: 1.2rem;
+  font-size: 0.4rem;
+}
 
 
 
