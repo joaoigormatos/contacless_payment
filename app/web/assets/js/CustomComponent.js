@@ -63,6 +63,13 @@ class CustomComponent {
   }
 
   renderComponent() {
+    
+    const globalStyle = document.createElement('link');
+    globalStyle.id = 'global';
+    globalStyle.rel = 'stylesheet';
+    globalStyle.href = '../../assets/css/style.css';
+    document.head.appendChild(globalStyle);
+
     if (window.innerWidth <= 500) {
       this.renderMobile();
     } else {
