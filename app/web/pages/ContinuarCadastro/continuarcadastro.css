@@ -26,4 +26,6 @@ label.file {
   cursor: pointer;
 }
 
-section.lateral { height: calc(100%); }
+section.lateral { height: 100%; }
+
+#content { width: 100vw; }

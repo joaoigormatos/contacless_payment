@@ -98,9 +98,7 @@ button.btn-yellow {
   color: #4f4f4f;
 }
 
-#content {
-  width: 415px;
-}
+#content { width: 100vw; }
 
 .desktopBackground {
   position: fixed;
