@@ -1,5 +1,5 @@
 // Remove o loader e renderiza os cards
-if(window.location.pathname === "/pages/History/history.html" ) {
+if(window.location.href === "../History/history.html" ) {
   setTimeout(() => {
     document.querySelector('.loader').remove();
     renderHistoryCards('history-card-container');
@@ -187,7 +187,7 @@ const chartContainer = document.querySelector('.chartContainer');
 if(chartContainer) {
   chartContainer.addEventListener('click', () => {
     if(window.innerWidth <= 600) {
-      document.location.pathname = '/pages/History/history.html';
+      document.location.href = '../History/history.html';
     } else {
       renderModal();
     }
