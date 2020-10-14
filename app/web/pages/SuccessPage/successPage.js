@@ -17,9 +17,14 @@ export const handleSuccess = (type, value, page) => {
 export const _createBoletoButton = (page) => {
   const successContainer = page.getElementById('success');
   const getBoletoLinkButton = page.createElement('button');
+  getBoletoLinkButton.id = 'boleto-link-btn';
   getBoletoLinkButton.classList.add('btn');
   getBoletoLinkButton.classList.add('btn-blue');
   getBoletoLinkButton.innerHTML = 'Copiar código do boleto';
+  
+  getBoletoLinkButton.onclick = function (event) {
+    event.target.innerHTML = 'Código copiado!';
+  };
 
   successContainer.appendChild(getBoletoLinkButton);
 };
