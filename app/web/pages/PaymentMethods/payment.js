@@ -108,7 +108,7 @@ const paymentMethodButton = document.querySelector('.payment-method');
 if (paymentMethodButton) {
   paymentMethodButton.addEventListener('click', () => {
     if (window.innerWidth <= 415) {
-      document.location.href = 'pages/PaymentMethods/payment_methods.html';
+      document.location.href = '../PaymentMethods/payment_methods.html';
     } else {
       renderPaymentModal();
     }
