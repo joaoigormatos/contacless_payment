@@ -48,9 +48,15 @@ const renderAddCurrencyContent = (main) => {
   buttonContainer.classList.add('btn-container');
   container.appendChild(buttonContainer);
 
+  const chamafi = e => {
+    console.log(e);
+    alert('chama fi');
+  }
+
   const creditButton = document.createElement('button');
   creditButton.innerHTML = 'Cartão de crédito';
   creditButton.id = 'credit';
+  creditButton.onclick = (e) => chamafi(e);
   creditButton.classList.add('btn');
   creditButton.classList.add('btn-yellow');
   buttonContainer.appendChild(creditButton);
@@ -114,7 +120,7 @@ const addCurrencyButton = document.querySelector('.add-currency');
 
 if (addCurrencyButton) {
   addCurrencyButton.addEventListener('click', () => {
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth <= 415) {
       document.location.href = '/app/web/pages/AddCurrency/add_currency.html';
     } else {
       renderModal(renderAddCurrencyContent);

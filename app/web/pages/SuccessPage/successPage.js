@@ -17,6 +17,7 @@ export const handleSuccess = (type, value, page) => {
 export const _createBoletoButton = (page) => {
   const successContainer = page.getElementById('success');
   const getBoletoLinkButton = page.createElement('button');
+
   getBoletoLinkButton.classList.add('btn');
   getBoletoLinkButton.classList.add('btn-blue');
   getBoletoLinkButton.innerHTML = 'Copiar código do boleto';

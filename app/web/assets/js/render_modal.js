@@ -27,4 +27,4 @@ function renderModal(contentCallback) {
   modalPlace.appendChild(modalPanel);
 }
 
-export default renderModal
+export default renderModal;
