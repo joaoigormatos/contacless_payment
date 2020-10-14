@@ -186,7 +186,7 @@ const chartContainer = document.querySelector('.chartContainer');
 
 if(chartContainer) {
   chartContainer.addEventListener('click', () => {
-    if(window.innerWidth < 500) {
+    if(window.innerWidth <= 600) {
       document.location.href = '/app/web/pages/History/history.html';
     } else {
       renderModal();

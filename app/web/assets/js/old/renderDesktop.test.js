@@ -1,4 +1,4 @@
-import CustomComponent from './CustomComponent';
+import CustomComponent from '../CustomComponent';
 
 let sut;
 beforeEach(() => {
