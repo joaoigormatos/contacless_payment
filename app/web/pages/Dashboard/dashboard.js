@@ -26,6 +26,7 @@ window.addEventListener('load', () => {
 })
 
 
+
 const setupHourPaymentControllerVariables = () => {
   domingoButton = document.getElementById('domingo')
   segundaButton = document.getElementById('segunda')
@@ -355,7 +356,7 @@ const historyChartSetup = () => {
     data: {
       labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junio', 'Julho', 'Setebro', 'Outubro', 'Novembro', 'Dezembro'],
       datasets: [{
-        label: 'valores',
+        label: 'histórico',
         data: [
           500, 300, 150, 500, 600, 700, 800, 900, 400, 440, 550, 800
         ],
