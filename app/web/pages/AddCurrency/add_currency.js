@@ -1,4 +1,5 @@
 import renderModal from '../../assets/js/render_modal.js';
+import { handleSuccess } from '../../pages/SuccessPage/successPage.js';
 
 const renderAddCurrencySuccessScreen = (main) => {
   const success = document.createElement('div');
@@ -36,6 +37,7 @@ const renderAddCurrencyContent = (main) => {
   container.appendChild(subtitle);
 
   const input = document.createElement('input');
+  input.id = 'currency-input';
   input.dir = 'rtl';
   input.type = 'currency';
   input.value = '';
@@ -60,14 +62,51 @@ const renderAddCurrencyContent = (main) => {
   boletoButton.classList.add('btn-yellow');
   buttonContainer.appendChild(boletoButton);
 
+  creditButton.addEventListener('click', function () {
+    const { value } = input;
+    if (!value) return false;
+    handleSuccess('credit', value, document);
+    input.value = null;
+  });
+
+  boletoButton.addEventListener('click', function () {
+    const { value } = input;
+    if (!value) return false;
+    handleSuccess('boleto', value, document);
+    input.value = null;
+  });
+
+  input.addEventListener('focus', onFocus);
+  input.addEventListener('blur', onBlur);
+
   renderAddCurrencySuccessScreen(main);
 
-  const script = document.createElement('script');
-  script.type = 'module';
-  script.src = '../../assets/js/currencyTextInputHelper.js';
-  main.appendChild(script);
-
   return main;
+};
+
+const currency = 'BRL';
+
+const localStringToNumber = (value) => {
+  return Number(String(value).replace(/[^0-9.-]+/g, ''));
+};
+
+const onFocus = (e) => {
+  const value = e.target.value;
+  e.target.value = value ? localStringToNumber(value) : '';
+};
+
+const onBlur = (e) => {
+  const value = e.target.value;
+  const options = {
+    maximumFractionDigits: 2,
+    currency: currency,
+    style: 'currency',
+    currencyDisplay: 'symbol',
+  };
+
+  e.target.value = value
+    ? localStringToNumber(value).toLocaleString(undefined, options)
+    : '';
 };
 
 // navegação para o histórico

@@ -18,7 +18,6 @@ function renderModal(contentCallback) {
     modalPanel.remove();
   });
 
-  // renderAddCurrencyContent(cardsContainer);
   contentCallback(cardsContainer)
 
   modalPanel.appendChild(modal);
