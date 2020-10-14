@@ -13,16 +13,16 @@
   }
   
   .headerContainer{
-    display:inline-block;
     width: 100%;
     height: 6rem;
     font-weight: bold;
+    padding: 0;
     color: white;
     background-image: linear-gradient( to right, var(--dark-blue-color), var(--blue-color));
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
 
-
+    
     border-top-right-radius: 0;
     border-top-left-radius: 0;
   }
@@ -135,9 +135,7 @@
     font-weight: 50;
   }
   #balanceHider{
-    position: relative;
-    top: -4px;
-    left: 6px;
+    margin-top: -0.01rem;
   }
   
   .containerCard{

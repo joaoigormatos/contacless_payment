@@ -35,7 +35,7 @@
 
 
 .btnContainer{
-  margin: 5rem;
+  margin: 4rem;
   
   display: flex;
   flex-direction: row;
@@ -133,6 +133,7 @@ input[type='time']:focus{
 }
 
 .timeSetContainer{
+  margin-top: 0.7rem;
   margin-bottom: 0.7rem;
 }
 
@@ -180,9 +181,8 @@ input[type='time']:focus{
 
 
 #balanceHider{
-  position: relative;
-  top: -4px;
-  left: 6px;
+  margin-top: -3px;
+  margin-left: 3px;
 }
 
 .containerCard{
@@ -237,7 +237,7 @@ h3{
   padding: 0.5rem;
 }
 .hourContainer h3{
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 
 .hourContainer p {
@@ -257,13 +257,11 @@ h3{
   display: flex;
   list-style: none;
   flex-direction: row;
-  justify-content: flex-start !important;
-  margin-top: 0.2rem;
-  align-self: flex-start;
+  margin-top: 0.6rem;
   padding: 0;
 }
 .weekItem{
-  display: inline-block;
+  
   background-color: var(--btn--color);
   border-radius: 1.2rem;
   color: white ;
@@ -271,11 +269,12 @@ h3{
   top: 1rem;
   width: 1rem;
   height: 1rem;
-  padding: 1px;
+  padding: 3px;
   font-size: 0.5rem;
   font-weight: bold;
   margin-left: .5rem;
   cursor: pointer;
+
 }
 
 .hiderValue{
@@ -286,10 +285,8 @@ p{
 }
 
 .weekItemText{
-  position: relative;
-  top: 0.2rem;
-  align-self: center;
-  justify-self: center;
+
+  
 }
 
 
