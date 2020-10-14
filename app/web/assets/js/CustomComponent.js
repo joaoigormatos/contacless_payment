@@ -21,6 +21,17 @@ class CustomComponent {
     modalCloseButton.innerHTML = '&times';
     modalContent.appendChild(modalCloseButton);
 
+    const modalStyle = document.createElement('link');
+    modalStyle.id = 'modal';
+    modalStyle.rel = 'stylesheet';
+    modalStyle.href = '../../assets/css/modal.css';
+    document.head.appendChild(modalStyle);
+
+    const modalScript = document.createElement('script');
+    modalScript.type = 'module';
+    modalScript.src = '../../assets/js/modalHandler.js';
+    body.appendChild(modalScript);
+
     return modalContent;
   }
 
@@ -48,11 +59,6 @@ class CustomComponent {
 
     this.renderContent(modalContent);
 
-    const modalScript = document.createElement('script');
-    modalScript.type = 'module';
-    modalScript.src = '../../assets/js/modalHandler.js';
-    body.appendChild(modalScript);
-
     const style = document.createElement('link');
     style.id = 'desktop';
     style.rel = 'stylesheet';
@@ -63,6 +69,13 @@ class CustomComponent {
   }
 
   renderComponent() {
+    
+    const globalStyle = document.createElement('link');
+    globalStyle.id = 'global';
+    globalStyle.rel = 'stylesheet';
+    globalStyle.href = '../../assets/css/style.css';
+    document.head.appendChild(globalStyle);
+
     if (window.innerWidth <= 500) {
       this.renderMobile();
     } else {

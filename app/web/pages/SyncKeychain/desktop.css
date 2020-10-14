@@ -63,9 +63,11 @@ input {
   width: 100%;
   height: 50px;
 }
+
 input:valid {
   background-color: #e5e5e5;
 }
+
 .question {
   position: relative;
   text-align: center;
@@ -73,12 +75,15 @@ input:valid {
   font-size: 1.25rem;
   font-weight: 700;
 }
+
 .question:first-of-type {
   padding-top: 0;
 }
+
 .question:last-of-type {
   padding-bottom: 0;
 }
+
 .question label {
   transform-origin: center;
   color: #f0f0f5;
@@ -88,6 +93,7 @@ input:valid {
   z-index: 1;
   pointer-events: none;
 }
+
 .question input[type='text'] {
   appearance: none;
   background-color: none;
@@ -105,6 +111,7 @@ input:valid {
   position: relative;
   z-index: 1;
 }
+
 .question input[type='text']:focus {
   outline: none;
   border: #121c25;
@@ -112,9 +119,11 @@ input:valid {
   color: #4f4f4f;
   margin-top: 30px;
 }
+
 .question input[type='text']:valid {
   margin-top: 30px;
 }
+
 .question input[type='text']:focus ~ label {
   -moz-transform: translate(0, -35px);
   -ms-transform: translate(0, -35px);
@@ -122,6 +131,7 @@ input:valid {
   transform: translate(0, -35px);
   color: #384887;
 }
+
 .question input[type='text']:valid ~ label {
   text-transform: uppercase;
   -moz-transform: translate(5px, -35px) scale(0.6);
