@@ -136,6 +136,7 @@
   }
   #balanceHider{
     margin-top: -0.01rem;
+    margin-top: -0.01rem;
   }
   
   .containerCard{
@@ -217,10 +218,7 @@
   }
   
   .weekItemText{
-    position: relative;
-    top: 0.2rem;
-    align-self: center;
-    justify-self: center;
+
   }
 
   .stateActive {
