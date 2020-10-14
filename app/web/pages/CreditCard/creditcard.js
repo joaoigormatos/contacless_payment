@@ -93,5 +93,11 @@ formCreditCard.addEventListener('keyup', (e) => {
   cardData.show[inputChanged].innerHTML = valorApresentado;
 });
 
+formCreditCard.addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('Cartão Cadastrado!');
+  window.location.href = '../Dashboard/dashboard.html';
+});
+
 loadCSS("../../assets/css/style.css");
 loadCSS("creditcard.css");
