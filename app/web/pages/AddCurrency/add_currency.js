@@ -48,15 +48,9 @@ const renderAddCurrencyContent = (main) => {
   buttonContainer.classList.add('btn-container');
   container.appendChild(buttonContainer);
 
-  const chamafi = e => {
-    console.log(e);
-    alert('chama fi');
-  }
-
   const creditButton = document.createElement('button');
   creditButton.innerHTML = 'Cartão de crédito';
   creditButton.id = 'credit';
-  creditButton.onclick = (e) => chamafi(e);
   creditButton.classList.add('btn');
   creditButton.classList.add('btn-yellow');
   buttonContainer.appendChild(creditButton);
