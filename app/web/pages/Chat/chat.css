@@ -46,8 +46,7 @@ header {
 }
 
 span.bot-message, span.user-message {
-  width: max-content;
-  max-width: 800px;
+  max-width: max-content;
 
   display: block;
 
