@@ -1,4 +1,4 @@
-import CustomComponent from '../../assets/js/CustomComponent.js';
+import CustomComponent from '../../../assets/js/CustomComponent.js';
 
 class PaymentMethodsComponent extends CustomComponent {
   renderCard = (container, cardType, cardTypeTitle, backText) => {

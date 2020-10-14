@@ -1,4 +1,4 @@
-import CustomComponent from '../../assets/js/CustomComponent.js';
+import CustomComponent from '../../../assets/js/CustomComponent.js'
 
 class AddCurrencyComponent extends CustomComponent {
   renderSuccessScreen(main) {
@@ -64,7 +64,7 @@ class AddCurrencyComponent extends CustomComponent {
 
     const script = document.createElement('script');
     script.type = 'module';
-    script.src = '../../assets/js/currencyTextInputHelper.js';
+    script.src = '../../../assets/js/currencyTextInputHelper.js';
     main.appendChild(script);
 
     return main;

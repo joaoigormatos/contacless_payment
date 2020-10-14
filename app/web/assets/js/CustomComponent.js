@@ -47,7 +47,7 @@ class CustomComponent {
     style.id = 'mobile';
     style.rel = 'stylesheet';
     style.href = './mobile.css';
-    head.appendChild(style);
+    document.head.appendChild(style);
 
     return document;
   }

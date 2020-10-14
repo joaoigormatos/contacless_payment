@@ -57,13 +57,16 @@ h2 {
   grid-area: text;
 }
 
+#credit > div:nth-child(1) > h3:nth-child(2) {
+  color: #F0F0F5;
+  }
+
 #credit .face--front{
   background: linear-gradient(
     227.39deg,
     rgba(81, 102, 185, 0.901042) -0.56%,
     #1c2755 67.51%
   );
-  color: #f0f0f5;
   padding: 0;
 }
 

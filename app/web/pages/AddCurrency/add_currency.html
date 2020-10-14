@@ -1,18 +1,41 @@
-<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DriveAndPay - Adicionar valor</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap"
       rel="stylesheet"
     />
+    <link id="global" rel="stylesheet" href="../../assets/css/style.css" />
+    <link id="mobile" rel="stylesheet" href="./mobile.css" />
   </head>
   <body>
-    <script
-      type="module"
-      src="./renderAddCurrencyComponent.js"
-    ></script>
+    <main>
+      <div id="container" class="wrapper">
+        <header id="add-currency-header">
+          <a href="../Dashboard/dashboard.html" class="back-arrow"></a>
+          <h1 id="add-currency-title">Adicionar saldo</h1>
+          <h2 id="add-currency-subtitle">Informe o valor</h2>
+        </header>
+        <input dir="rtl" type="currency" placeholder="R$ 0,00" />
+        <div class="btn-container">
+          <button id="credit" class="btn btn-yellow">Cartão de crédito</button
+          ><button id="boleto" class="btn btn-yellow">Boleto</button>
+        </div>
+      </div>
+      <div id="success" class="hidden" style="display: none">
+        <img src="../../assets/images/success-icon.svg" />
+        <main id="add-currency-header">
+          <a href="../Dashboard/dashboard.html" class="back-arrow"></a>
+          <h1 id="success-header"></h1>
+          <p id="success-message"></p>
+        </main>
+      </div>
+      <script
+        type="module"
+        src="../../assets/js/currencyTextInputHelper.js"
+      ></script>
+    </main>
   </body>
 </html>
