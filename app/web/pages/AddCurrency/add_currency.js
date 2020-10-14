@@ -114,8 +114,8 @@ const addCurrencyButton = document.querySelector('.add-currency');
 
 if (addCurrencyButton) {
   addCurrencyButton.addEventListener('click', () => {
-    if (window.innerWidth <= 415) {
-      document.location.href = '/app/web/pages/AddCurrency/add_currency.html';
+    if (window.innerWidth <= 600) {
+      document.location.href = '/pages/AddCurrency/add_currency.html';
     } else {
       renderModal(renderAddCurrencyContent);
     }
