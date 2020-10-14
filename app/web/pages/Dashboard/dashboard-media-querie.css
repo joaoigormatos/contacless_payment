@@ -156,6 +156,7 @@
   h3{
     color: var(--dark-blue-color);
     margin-top: 2rem;
+    margin-bottom: 0.5rem;
     font-weight: bold;
     font-size: 0.6rem;
   }
@@ -254,5 +255,6 @@
   input[type="time"]{
     
     background-color: var(--body-color);
+    width: 65%;
   }
 }
