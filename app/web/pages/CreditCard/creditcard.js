@@ -1,3 +1,4 @@
+
 const modal = document.querySelector('#modal');
 modal.innerHTML = "";
 const card = document.createElement('div');
@@ -40,6 +41,7 @@ const cardData = {
     name: cardSpans[4]
   }
 }
+
 
 formCreditCard.addEventListener('keyup', (e) => {
   if (e.key === "Backspace" || e.key === "Delete") return;

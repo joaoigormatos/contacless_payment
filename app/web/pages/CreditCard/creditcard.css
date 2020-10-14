@@ -1,3 +1,17 @@
+#container {
+  max-width: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 414px) {
+  #container {
+    display: flex;
+    height: calc(100vh - 60px);
+  }
+}
+
 #modal {
   display: flex;
   flex-direction: column;
@@ -10,6 +24,7 @@
   width: 80%;
   border-radius: 15px;
   min-width: 300px;
+  margin-bottom: 30px;
 }
 
 #topDiv {
@@ -46,3 +61,4 @@
 }
 
 div.small { width: 42% }
+
