@@ -12,7 +12,7 @@ function renderModal(contentCallback) {
 
   const closeButton = document.createElement('button');
   closeButton.id = 'close-btn';
-  closeButton.innerText = 'X';
+  closeButton.innerHTML = '<img src="../../assets/icons/close.svg"/>';
 
   closeButton.addEventListener('click', () => {
     modalPanel.remove();
