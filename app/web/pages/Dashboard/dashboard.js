@@ -23,6 +23,7 @@ window.addEventListener('load', () => {
   historyChartSetup();
 });
 
+
 const setupHourPaymentControllerVariables = () => {
   domingoButton = document.getElementById('domingo');
   segundaButton = document.getElementById('segunda');
@@ -389,26 +390,16 @@ const historyChartSetup = () => {
   let chart = new Chart(historyChart, {
     type: 'bar',
     data: {
-      labels: [
-        'Janeiro',
-        'Fevereiro',
-        'Março',
-        'Abril',
-        'Maio',
-        'Junio',
-        'Julho',
-        'Setebro',
-        'Outubro',
-        'Novembro',
-        'Dezembro',
-      ],
-      datasets: [
-        {
-          label: 'valores',
-          data: [500, 300, 150, 500, 600, 700, 800, 900, 400, 440, 550, 800],
-          backgroundColor: '#5166B9',
-        },
-      ],
-    },
-  });
-};
+      labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junio', 'Julho', 'Setebro', 'Outubro', 'Novembro', 'Dezembro'],
+      datasets: [{
+        label: 'histórico',
+        data: [
+          500, 300, 150, 500, 600, 700, 800, 900, 400, 440, 550, 800
+        ],
+        backgroundColor: '#5166B9'
+      }]
+    }
+  })
+
+}
+
