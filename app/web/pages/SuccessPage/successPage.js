@@ -20,6 +20,7 @@ export const _createBoletoButton = (page) => {
   getBoletoLinkButton.classList.add('btn');
   getBoletoLinkButton.classList.add('btn-blue');
   getBoletoLinkButton.innerHTML = 'Copiar código do boleto';
+
   successContainer.appendChild(getBoletoLinkButton);
 };
 
@@ -49,11 +50,5 @@ export const _toggleCurrentContainer = (
   } else {
     container.style.display = 'none';
     successContainer.style.display = 'block';
-    setTimeout(() => {
-      const modal = document.getElementById('myModal');
-      modal.style.display = 'none';
-      container.style.display = 'block';
-      successContainer.style.display = 'none';
-    }, 500);
   }
 };

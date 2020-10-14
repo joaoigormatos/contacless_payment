@@ -1,6 +1,4 @@
-import {
-  handleSuccess,
-} from '../../pages/SuccessPage/successPage.js';
+import { handleSuccess } from '../../pages/SuccessPage/successPage.js';
 
 const currencyInput = document.querySelector('input[type="currency"]');
 const creditButton = document.getElementById('credit');
@@ -33,13 +31,13 @@ const onBlur = (e) => {
 const sendCreditValue = () => {
   const { value } = currencyInput;
   if (!value) return false;
-  handleSuccess("credit", value, document)
+  handleSuccess('credit', value, document);
   currencyInput.value = null;
 };
 const sendBoletoValue = () => {
   const { value } = currencyInput;
   if (!value) return false;
-  handleSuccess("boleto", value, document)
+  handleSuccess('boleto', value, document);
   currencyInput.value = null;
 };
 

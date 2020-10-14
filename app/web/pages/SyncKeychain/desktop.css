@@ -1,8 +1,8 @@
 .wrapper {
   display: flex;
   align-items: stretch;
+  height: 100%;
 }
-
 .side-image {
   flex: 1;
   background-position: center;
@@ -12,15 +12,13 @@
 }
 
 .content {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px;
+  width: 415px;
 }
 
 h2 {
-  margin-top: 15%;
   padding-left: 10%;
   padding-right: 10%;
   font-size: 2rem;
@@ -49,6 +47,12 @@ p {
   margin-top: 5%;
 }
 
+@media(min-width: 415px) {
+  .btn-contactless {
+    display: none;
+  }
+}
+
 .transition,
 .question label,
 .question input[type='text'] {
@@ -65,9 +69,11 @@ input {
   width: 100%;
   height: 50px;
 }
+
 input:valid {
   background-color: #e5e5e5;
 }
+
 .question {
   position: relative;
   text-align: center;
@@ -75,21 +81,25 @@ input:valid {
   font-size: 1.25rem;
   font-weight: 700;
 }
+
 .question:first-of-type {
   padding-top: 0;
 }
+
 .question:last-of-type {
   padding-bottom: 0;
 }
+
 .question label {
   transform-origin: center;
   color: #f0f0f5;
   position: absolute;
-  margin-top: -40px;
-  margin-left: -70px;
+  margin-top: -37px;
+  margin-left: -77px;
   z-index: 1;
   pointer-events: none;
 }
+
 .question input[type='text'] {
   appearance: none;
   background-color: none;
@@ -107,6 +117,7 @@ input:valid {
   position: relative;
   z-index: 1;
 }
+
 .question input[type='text']:focus {
   outline: none;
   border: #121c25;
@@ -114,9 +125,11 @@ input:valid {
   color: #4f4f4f;
   margin-top: 30px;
 }
+
 .question input[type='text']:valid {
   margin-top: 30px;
 }
+
 .question input[type='text']:focus ~ label {
   -moz-transform: translate(0, -35px);
   -ms-transform: translate(0, -35px);
@@ -124,6 +137,7 @@ input:valid {
   transform: translate(0, -35px);
   color: #384887;
 }
+
 .question input[type='text']:valid ~ label {
   text-transform: uppercase;
   -moz-transform: translate(5px, -35px) scale(0.6);

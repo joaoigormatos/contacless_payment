@@ -25,9 +25,25 @@ header #logo {
   width: 20px;
 }
 
+@media (min-width:580px) {.header { display: none }}
+
+section.side {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.lateral { 
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 section#container {
+  width: 100%;
   margin: 30px;
-  max-width: 415px;
 }
 
 form {
@@ -82,9 +98,7 @@ button.btn-yellow {
   color: #4f4f4f;
 }
 
-#content {
-  width: 415px;
-}
+#content { width: 415px; }
 
 .desktopBackground {
   position: fixed;

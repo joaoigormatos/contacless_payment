@@ -3,6 +3,7 @@ const menuCadastrar = document.querySelector('li#cadastrar');
 const formLogin = document.querySelector('form#login');
 const formCadastro = document.querySelector('form#cadastro');
 const inputCEP = document.querySelector('input[name=cep]');
+const lateralSection = document.querySelector('section.lateral');
 
 const validaForm = (e) => {
   if (e.key === "Backspace" || e.key === "Delete") return;
@@ -63,6 +64,7 @@ const showLogin = () => {
   menuCadastrar.className = "";
   formCadastro.style.display = "none";
   formLogin.style.display = "flex";
+  lateralSection.style.height = "calc(100vh - 100px)";
 }
 
 const showCadastro = () => {
@@ -70,6 +72,7 @@ const showCadastro = () => {
   menuEntrar.className = "";
   formLogin.style.display = "none";
   formCadastro.style.display = "flex";
+  lateralSection.style.height = "100%";
 }
 
 const handleSubmitLogin = (e) => {
@@ -87,7 +90,7 @@ const handleSubmitLogin = (e) => {
             return acumulador;
           },false)
 
-          if (resultado === true) window.location.href = "../dashboard.html";
+          if (resultado === true) window.location.href = "../DashBoard/dashboard.html";
           else alert('Usuário não encontrado, tente novamente');
         });
     })

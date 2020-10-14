@@ -13,16 +13,16 @@
   }
   
   .headerContainer{
-    display:inline-block;
     width: 100%;
     height: 6rem;
     font-weight: bold;
+    padding: 0;
     color: white;
     background-image: linear-gradient( to right, var(--dark-blue-color), var(--blue-color));
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
 
-
+    
     border-top-right-radius: 0;
     border-top-left-radius: 0;
   }
@@ -135,9 +135,8 @@
     font-weight: 50;
   }
   #balanceHider{
-    position: relative;
-    top: -4px;
-    left: 6px;
+    margin-top: -0.01rem;
+    margin-top: -0.01rem;
   }
   
   .containerCard{
@@ -157,6 +156,7 @@
   h3{
     color: var(--dark-blue-color);
     margin-top: 2rem;
+    margin-bottom: 0.5rem;
     font-weight: bold;
     font-size: 0.6rem;
   }
@@ -219,10 +219,7 @@
   }
   
   .weekItemText{
-    position: relative;
-    top: 0.2rem;
-    align-self: center;
-    justify-self: center;
+
   }
 
   .stateActive {
@@ -258,5 +255,6 @@
   input[type="time"]{
     
     background-color: var(--body-color);
+    width: 65%;
   }
 }

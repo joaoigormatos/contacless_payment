@@ -1,6 +1,7 @@
 form#continuarcadastro { 
   align-items: center;
   justify-content: center;
+  margin-top: 0;
 }
 
 form h2 { 
@@ -24,3 +25,5 @@ label.file {
   margin-top: 20px;
   cursor: pointer;
 }
+
+section.lateral { height: 100%; }

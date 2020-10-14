@@ -14,29 +14,27 @@
   <body style="margin: 0">
     <main>
       <div class="wrapper">
-        <div class="content">
-          <h2>Bem vindo, <br />Fabiano!</h2>
-          <p>Estamos quase lá!</p>
-          <img class="keychain" src="../../assets/images/keychain.svg" />
-          <div class="btn-container">
-            <button
-              class="btn btn-blue"
-              type="submit"
-              onclick="window.location.assign('../PaymentMethods/payment_methods.html')"
-            >
-              SEM CONTATO
-            </button>
-            <div class="question">
-              <input
-                type="text"
-                required
-                pattern="\S+.*"
-                value=""
-              />
-              <label>USAR CÓDIGO</label>
+        <section class="side">
+          <div class="content">
+            <h2>Bem vindo, <br />Fabiano!</h2>
+            <p>Estamos quase lá!</p>
+            <img class="keychain" src="../../assets/images/keychain.svg" />
+            <div class="btn-container">
+              <button class="btn btn-blue btn-contactless">
+                SEM CONTATO
+              </button>
+              <div class="question">
+                <input
+                  type="text"
+                  required
+                  pattern="\S+.*"
+                  value=""
+                />
+                <label>USAR CÓDIGO</label>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
         <aside class="desktopBackground"></aside>
       </div>
     </main>
