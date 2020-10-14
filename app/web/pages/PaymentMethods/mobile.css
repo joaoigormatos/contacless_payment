@@ -3,14 +3,38 @@
   justify-items: center;
 }
 
-h2 {
-  margin-top: 5%;
-  margin-bottom: 2.5%;
-  font-size: 2rem;
-  color: #4f4f4f;
-  text-align: center;
-  white-space: pre-line;
+.back-arrow {
+  background: transparent;
+  border: none;
+  outline: none;
+
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  width: 30px;
+  height: 30px;
+
+  background: url('../../assets/images/left-arrow.svg');
+
+  cursor: pointer;
 }
+
+header#history-header {
+  padding-top: 48px;
+
+}
+
+h1#history-title {
+  color: var(--main);
+  text-align: center;
+  font-size: 24px;
+
+  
+
+  margin: 0 auto;
+}
+
 
 .scene {
   width: 200px;

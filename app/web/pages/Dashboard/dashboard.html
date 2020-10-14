@@ -7,12 +7,15 @@
   <title>Dashboard</title>
   <link rel="stylesheet" href="./dashboard.css">
   <link rel="stylesheet" href="../History/history.css">
+  <link rel="stylesheet" href="../PaymentMethods/desktop.css">
   <link rel="stylesheet" href="./dashboard-media-querie.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <script defer src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
   <script defer src="./dashboard.js"></script>
   <script defer src="../History/history.js"></script>
+  <script defer src="../PaymentMethods/payment.js"></script>
+  <script type="module" src="../AddCurrency/add_currency.js"></script>
 </head>
 
 <body>
@@ -45,13 +48,13 @@
 
     <div class="middleContainer">
       <div class="btnContainer">
-        <button class="btn">
+        <button class="btn add-currency" >
           <!--Place an icon here-->
           <img src="../../assets/icons/money-transfer.svg" alt=" money transfer">
           <p>Adicionar saldo</p>
   
         </button>
-        <button class="btn">
+        <button class="btn payment-method">
           <img src="../../assets/icons/money-transfer-coin.svg" alt="change credit card">
           <p>Trocar Cartão</p>
         </button>

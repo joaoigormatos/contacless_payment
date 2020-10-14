@@ -1,4 +1,4 @@
-import CustomComponent from '../../assets/js/CustomComponent.js';
+import CustomComponent from '../../../assets/js/CustomComponent.js'
 
 class AddCurrencyComponent extends CustomComponent {
   renderSuccessScreen(main) {

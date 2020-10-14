@@ -5,14 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DriveAndPay - Métodos de pagamento</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap"
       rel="stylesheet"
     />
+    <link id="global" rel="stylesheet" href="../../assets/css/style.css" />
+    <link id="mobile" rel="stylesheet" href="./mobile.css" />
   </head>
   <body>
-    <script
-      type="module"
-      src="./renderPaymentMethodsComponent.js"
-    ></script>
+    <header id="history-header">
+      <a href="../Dashboard/dashboard.html" class="back-arrow"></a>
+      <h1 id="history-title">Método para pagamentos</h1>
+    </header>
+    <main>
+      <div id="container" class="container">
+        <div class="scene scene--card">
+          <div id="credit" class="card">
+            <div class="face face--front">
+              <img
+                height="80"
+                width="80"
+                src="../../assets/images/plus-icon.svg"
+              />
+              <h3>Cartão de crédito</h3>
+            </div>
+            <div class="face face--back">
+              <p>
+                Tokenize seu cartão de crédito, deixando-o registrado. Segurança
+                e praticidade na hora do pagamento.
+              </p>
+              <a>Continuar</a>
+            </div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div id="prepaid" class="card">
+            <div class="face face--front">
+              <img
+                height="80"
+                width="80"
+                src="../../assets/images/plus-icon.svg"
+              />
+              <h3>Pré-pago</h3>
+            </div>
+            <div class="face face--back">
+              <p>
+                Se não quiser registrar um cartão de crédito, vá de pré-pago!
+                Adicione na carteira virtual, tanto por cartão ou boleto.
+              </p>
+              <a>Continuar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
+  <script defer src="../../assets/js/card-flip.js"></script>
 </html>
