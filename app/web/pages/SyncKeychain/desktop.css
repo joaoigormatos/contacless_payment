@@ -88,8 +88,8 @@ input:valid {
   transform-origin: center;
   color: #f0f0f5;
   position: absolute;
-  margin-top: -40px;
-  margin-left: -70px;
+  margin-top: -37px;
+  margin-left: -77px;
   z-index: 1;
   pointer-events: none;
 }
